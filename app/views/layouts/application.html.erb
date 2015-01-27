@@ -6,7 +6,19 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="cbp-spmenu-push">
+  <a class="menu" href="#" id="showRightPush">MENU<%= image_tag "hamburger.svg" %></a>
+  <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+    <a href="#">Celery seakale</a>
+    <a href="#">Dulse daikon</a>
+    <a href="#">Zucchini garlic</a>
+    <a href="#">Catsear azuki bean</a>
+    <a href="#">Dandelion bunya</a>
+    <a href="#">Rutabaga</a>
+  </nav>
+
+
+
   <div class="page-wrapper">
 
     <%= render 'layouts/header' %>

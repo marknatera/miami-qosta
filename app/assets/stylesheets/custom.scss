@@ -6,6 +6,10 @@
     .col-md-4-left {
       @extend .col-md-4;
       float: left;
+      padding-top:10px;
+      ul {
+        padding-left: 0;
+      }
       li {
         display: inline-block;
         &:after{
@@ -44,6 +48,29 @@
     }
   }
 }
+
+// Menu
+  .menu {
+    color: #575757;
+    position: fixed;
+    z-index: 100;
+    top: 33px;
+    right: 145px;
+    font-size: 22px;
+    &:active, &:focus, &:hover{
+      color: #575757;
+    }
+    img {
+      width: 38px;
+      margin-top: -5px;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      right:20px;
+    }
+    @media (max-width: 767px) {
+      right:20px;
+    }
+  }
 
 // Home Page
 .header-15-sub-home {
