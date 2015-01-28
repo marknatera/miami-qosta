@@ -26,3 +26,5 @@
 //= require menu
 //= require classie
 //= require custom
+//= require selectFx
+//= require classie2

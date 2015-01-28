@@ -1,4 +1,4 @@
-$qgray: #575757;
+$qgray: #6d6e71;
 
 
 // Nav Bar
@@ -54,15 +54,17 @@ $qgray: #575757;
 
 // Menu
   .menu {
-    color: #575757;
+    color: $qgray;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
     position: fixed;
     z-index: 100;
     top: 33px;
-    right: 145px;
+    right: 20px;
     font-size: 22px;
     cursor: pointer;
     &:active, &:focus, &:hover{
-      color: #575757;
+      color: $qgray;
     }
     img {
       width: 38px;
@@ -157,15 +159,69 @@ $qgray: #575757;
   }
 }
 
- .home-content {
-   h1 {
+.home-content {
+  padding-top:125px;
+  padding-bottom:150px;
+  h1 {
     font-family: 'Lato', sans-serif;
     color: $qgray;
     font-size: 35px;
     font-weight: 300;
     text-align: center;
   }
-   .delimiter {
+  p {
+    font-family: 'Lato', sans-serif;
+    color: $qgray;
+    font-weight: 300;
+  }
+  ul {
+    padding-left: 15px;
+    li {
+      font-family: 'Lato', sans-serif;
+      color: $qgray;
+      font-weight: 300;
+    }
+  }
+  .delimiter {
      margin-top: 100px;
-   }
- }
+  }
+}
+
+.project-home {
+  h1 {
+    font-family: 'Lato', sans-serif;
+    color: $qgray;
+    font-size: 45px;
+    font-weight: 300;
+    text-align: left;
+    padding-top: 50%;
+  }
+  .arrow {
+    padding-left: 80px;
+  }
+  .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .diagonal {
+    border: 570px #ffffff solid;
+    position: absolute;
+    top: 0;
+    left: -160px;
+    transform: rotate(15deg);
+    z-index: -1;
+  }
+}
+
+
+// Footer
+.footer-2 {
+  p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color:#ffffff;
+  }
+  a {
+    color:#ffffff;
+  }
+}

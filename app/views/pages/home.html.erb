@@ -29,7 +29,6 @@
   </div>
 </section>
 <section class="home-content" id="next">
-  <div class="delimiter"></div>
   <div class="container">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
@@ -64,17 +63,18 @@
         <p>We apprecialte our clientele and that is the reason why we give them the most expensive matter. We give them time.</p>
       </div>
     </div>
-    <div class="delimiter"></div>
   </div>
 </section>
 <section class="project-home">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6">
-        <%= image_tag "projects-home.png" %>
+      <div class="col-md-7">
+        <%= image_tag "projects-home.jpg", class: 'img-responsive' %>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-5">
+        <div class="diagonal"></div>
         <h1>PROJECTS</h1>
+        <%= link_to image_tag('arrow-right.png'), root_path, class: 'arrow' %>
       </div>
     </div>
   </div>
