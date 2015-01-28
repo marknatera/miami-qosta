@@ -53,4 +53,4 @@ end
 group :production do
   gem 'pg' # Postgresql DB
   gem 'rails_12factor' # Heroku asset handler
-endx
+end
