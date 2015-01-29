@@ -93,7 +93,12 @@ $qgray: #6d6e71;
     background-image:url(image-path("home-main.jpg"));
     opacity: 1;
     background-attachment: fixed;
-    height:100vh;
+    @media (min-width: 768px) and (max-width: 991px) {
+      height: 100vh;
+    }
+    @media (max-width: 767px) {
+      height: 100vh;
+    }
   }
   h2 {
     font-family: 'Lato', sans-serif;
@@ -195,9 +200,33 @@ $qgray: #6d6e71;
     font-weight: 300;
     text-align: left;
     padding-top: 50%;
+    @media (min-width: 768px) and (max-width: 991px) {
+      padding-top: 50px;
+      text-align: center;
+    }
+    @media (max-width: 767px) {
+      padding-top: 50px;
+      text-align: center;
+    }
   }
   .arrow {
     padding-left: 80px;
+    @media (min-width: 768px) and (max-width: 991px) {
+      padding-left: 0px;
+      img {
+        margin: 0 auto;
+        display: block;
+        padding-bottom: 60px;
+      }
+    }
+    @media (max-width: 767px) {
+      padding-left: 0px;
+      img {
+        margin: 0 auto;
+        display: block;
+        padding-bottom: 60px;
+      }
+    }
   }
   .container-fluid {
     padding-left: 0px;
@@ -210,6 +239,12 @@ $qgray: #6d6e71;
     left: -160px;
     transform: rotate(15deg);
     z-index: -1;
+    @media (min-width: 768px) and (max-width: 991px) {
+      display: none;
+    }
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 }
 

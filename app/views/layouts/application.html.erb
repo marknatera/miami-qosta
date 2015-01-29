@@ -10,11 +10,11 @@
   <a class="menu" id="showRightPush">MENU<%= image_tag "hamburger.svg" %></a>
   <div>
   <select class="cs-select cs-skin-elastic">
-    <option value="" disabled selected>Select a Country</option>
-    <option value="france" data-class="flag-france">France</option>
-    <option value="brazil" data-class="flag-brazil">Brazil</option>
-    <option value="argentina" data-class="flag-argentina">Argentina</option>
-    <option value="south-africa" data-class="flag-safrica">South Africa</option>
+    <option value="" disabled selected>Language</option>
+    <option value="spain" data-class="flag-spain">Español</option>
+    <option value="france" data-class="flag-france">français</option>
+    <option value="brazil" data-class="flag-brazil">Português</option>
+    <option value="russia" data-class="flag-russia">русский</option>
   </select>
 </div>
   <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
@@ -33,14 +33,28 @@
   <footer class="footer-2 bg-black">
     <%= render 'layouts/footer' %>
   </footer>
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<script>
-(function() {
-  [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
-    new SelectFx(el);
-  } );
-})();
-</script>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <script>
+
+    (function() {
+      [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+        new SelectFx(el);
+      } );
+    })();
+
+    (function($) {
+      $('.header-15-sub-home').each(function() {
+        if (! isMobile.any() ) {
+          $(this).parallax('50%', 1, true);
+        } else {
+          $(this).css('background-attachment', 'initial')
+        }
+      })
+    }(jQuery));
+
+  </script>
 
 </body>
 </html>

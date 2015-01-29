@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+//= require custom
 //= require jquery.scrollTo-1.4.3.1-min
 //= require modernizr.custom
 //= require page-transitions
@@ -25,6 +26,6 @@
 //= require startup-kit
 //= require menu
 //= require classie
-//= require custom
 //= require selectFx
 //= require classie2
+//= require jquery.parallaxor
