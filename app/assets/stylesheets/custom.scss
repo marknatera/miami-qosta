@@ -196,6 +196,10 @@ $qgray: #6d6e71;
 .project-home {
   background-image:url(image-path("projects-home.jpg"));
   background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   z-index: 3;
   height: 100vh;
   @media (min-width: 768px) and (max-width: 991px) {
@@ -317,6 +321,10 @@ $qgray: #6d6e71;
   padding: 200px 0;
   background-image:url(image-path("development.jpg"));
   background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   h1 {
     font-family: 'Lato', sans-serif;
     color: #ffffff;
