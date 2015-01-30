@@ -97,6 +97,10 @@ $qgray: #6d6e71;
     background-image:url(image-path("home-main.jpg"));
     opacity: 1;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     @media (min-width: 768px) and (max-width: 991px) {
       height: 100vh;
     }
@@ -241,7 +245,7 @@ $qgray: #6d6e71;
     color: $qgray;
     font-size: 45px;
     font-weight: 300;
-    text-align: left;
+    text-align: center;
     padding-top: 50%;
     text-transform: uppercase;
     @media (min-width: 768px) and (max-width: 991px) {
@@ -254,7 +258,10 @@ $qgray: #6d6e71;
     }
   }
   .arrow {
-    padding-left: 80px;
+    img{
+      margin: 0 auto;
+      display: block;
+    }
     @media (min-width: 768px) and (max-width: 991px) {
       padding-left: 0px;
       img {
