@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/concierge/time-management' => 'pages#time'
   get '/investments' => 'pages#investments'
   get '/investments/how-to-buy-a-house' => 'pages#house'
+  get '/integral-service' => 'pages#integral'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

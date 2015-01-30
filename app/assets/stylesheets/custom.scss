@@ -178,6 +178,7 @@
     font-size: 35px;
     font-weight: 300;
     text-align: center;
+    text-transform: uppercase;
   }
   p {
     font-family: 'Lato', sans-serif;
@@ -641,6 +642,42 @@
   background-image:url(image-path("house-2.jpg"));
 }
 
+// Integral Services Main Page
+
+.integral-content {
+  @extend .home-content;
+  h1 {
+    font-size: 30px;
+  }
+}
+.integral-1 {
+  @extend .concierge-1;
+  @extend .project-home;
+  background-image:url(image-path("integral.jpg"));
+}
+.integral-2 {
+    @extend .concierge-2;
+    background-image:url(image-path("integral-2.jpg"));
+}
+.integral-3 {
+  @extend .concierge-1;
+  @extend .project-home;
+  background-image:url(image-path("integral-3.jpg"));
+}
+.integral-4 {
+    @extend .concierge-2;
+    background-image:url(image-path("integral-4.jpg"));
+}
+.integral-5 {
+  @extend .concierge-3;
+  @extend .project-home;
+  background-image:url(image-path("integral-5.jpg"));
+}
+.integral-6 {
+  @extend .concierge-3;
+  @extend .project-home;
+  background-image:url(image-path("integral-6.jpg"));
+}
 
 // Footer
 .footer-2 {
