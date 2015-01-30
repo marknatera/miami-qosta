@@ -4,8 +4,11 @@ $qgray: #6d6e71;
 // Nav Bar
 .header-3 {
   .navbar-header{
-    padding-top: 20px;
+    padding-top: 15px;
     float: none;
+    img {
+      width: 150px;
+    }
     .col-md-4-left {
       @extend .col-md-4;
       float: left;
@@ -480,6 +483,11 @@ $qgray: #6d6e71;
     background-image:url(image-path("sky.jpg"));
     opacity: 1;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
   }
   h1 {
     font-family: 'Lato', sans-serif;
@@ -488,10 +496,10 @@ $qgray: #6d6e71;
     font-weight: 300;
     text-align: center;
     text-transform: uppercase;
-    padding-top: 30vh;
+    padding-top: 20%;
   }
   img {
-    padding-top: 30vh;
+    padding-top: 20%;
   }
 }
 .sky-content {
@@ -507,4 +515,19 @@ $qgray: #6d6e71;
     width: 50px;
     border-top: #000000 solid 1px;
   }
+}
+
+// Ocean Concierge
+.ocean {
+  @extend .sky;
+  .background {
+    background-image:url(image-path("ocean.jpg"));
+  }
+}
+.ocean-content {
+  @extend .home-content;
+}
+.ocean-info {
+  @extend .sky-info;
+  background-image:url(image-path("ocean-2.jpg"));
 }
