@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get '/development' => 'pages#development'
   get '/concierge' => 'pages#concierge'
+  get '/sky-concierge' => 'pages#sky'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

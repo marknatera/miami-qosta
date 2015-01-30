@@ -367,7 +367,8 @@ $qgray: #6d6e71;
   }
 }
 
-//
+// Concierge Main Page
+
 .concierge-1 {
   @extend .project-home;
   background-image:url(image-path("concierge-1.jpg"));
@@ -469,4 +470,41 @@ $qgray: #6d6e71;
   @extend .concierge-1;
   @extend .project-home;
   background-image:url(image-path("concierge-9.jpg"));
+}
+
+// Interior Concierge Pages
+// Sky Concierge
+.sky {
+  @extend .header-15-sub;
+  .background {
+    background-image:url(image-path("sky.jpg"));
+    opacity: 1;
+    background-attachment: fixed;
+  }
+  h1 {
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 30vh;
+  }
+  img {
+    padding-top: 30vh;
+  }
+}
+.sky-content {
+  @extend .home-content;
+}
+.sky-info {
+  @extend .concierge-1;
+  background-image:url(image-path("sky-2.jpg"));
+  h1, p {
+    text-align: center;
+  }
+  hr {
+    width: 50px;
+    border-top: #000000 solid 1px;
+  }
 }
