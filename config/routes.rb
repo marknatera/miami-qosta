@@ -4,12 +4,13 @@ Rails.application.routes.draw do
 
   get '/development' => 'pages#development'
   get '/concierge' => 'pages#concierge'
-  get '/sky-concierge' => 'pages#sky'
-  get '/ocean-concierge' => 'pages#ocean'
-  get '/executive-concierge' => 'pages#executive'
-  get '/exotic-concierge' => 'pages#exotic'
-  get '/time-management' => 'pages#time'
+  get '/concierge/sky-concierge' => 'pages#sky'
+  get '/concierge/ocean-concierge' => 'pages#ocean'
+  get '/concierge/executive-concierge' => 'pages#executive'
+  get '/concierge/exotic-concierge' => 'pages#exotic'
+  get '/concierge/time-management' => 'pages#time'
   get '/investments' => 'pages#investments'
+  get '/investments/how-to-buy-a-house' => 'pages#house'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -61,7 +62,7 @@ Rails.application.routes.draw do
 
   # Example resource route within a namespace:
   #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
+  #     Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end

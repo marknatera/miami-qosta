@@ -629,6 +629,21 @@ $qgray: #6d6e71;
   @extend .concierge-3;
   background-image:url(image-path("invest-3.jpg"));
 }
+// Investment Interior Pages
+.house {
+  @extend .sky;
+  .background {
+    background-image:url(image-path("house.jpg"));
+  }
+}
+.house-content {
+  @extend .home-content;
+}
+.house-info {
+  @extend .sky-info;
+  background-image:url(image-path("house-2.jpg"));
+}
+
 
 // Footer
 .footer-2 {
