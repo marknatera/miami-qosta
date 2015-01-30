@@ -376,12 +376,14 @@ $qgray: #6d6e71;
   @extend .project-home;
   background-image:url(image-path("concierge-1.jpg"));
   h1 {
-    padding-top: 40%;
+    padding-top: 50%;
+    text-align:center;
   }
   p {
     font-family: 'Lato', sans-serif;
     color: #6d6e71;
     font-weight: 300;
+    text-align:center;
   }
   .arrow-right {
     img{
@@ -436,17 +438,6 @@ $qgray: #6d6e71;
 .concierge-4 {
   @extend .concierge-2;
   background-image:url(image-path("concierge-4.jpg"));
-}
-// Footer
-.footer-2 {
-  p {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    color:#ffffff;
-  }
-  a {
-    color:#ffffff;
-  }
 }
 
 .concierge-5 {
@@ -508,6 +499,9 @@ $qgray: #6d6e71;
 .sky-info {
   @extend .concierge-1;
   background-image:url(image-path("sky-2.jpg"));
+  h1 {
+    padding-top: 40%;
+  }
   h1, p {
     text-align: center;
   }
@@ -575,4 +569,22 @@ $qgray: #6d6e71;
 .time-info {
   @extend .sky-info;
   background-image:url(image-path("time-2.jpg"));
+}
+
+
+
+
+
+
+
+// Footer
+.footer-2 {
+  p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color:#ffffff;
+  }
+  a {
+    color:#ffffff;
+  }
 }
