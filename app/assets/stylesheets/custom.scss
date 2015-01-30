@@ -561,3 +561,18 @@ $qgray: #6d6e71;
   @extend .sky-info;
   background-image:url(image-path("exotic-2.jpg"));
 }
+
+// Time Management
+.time {
+  @extend .sky;
+  .background {
+    background-image:url(image-path("time.jpg"));
+  }
+}
+.time-content {
+  @extend .home-content;
+}
+.time-info {
+  @extend .sky-info;
+  background-image:url(image-path("time-2.jpg"));
+}
