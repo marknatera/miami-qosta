@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get '/development' => 'pages#development'
+  get '/concierge' => 'pages#concierge'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

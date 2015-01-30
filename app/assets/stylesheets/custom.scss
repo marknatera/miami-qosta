@@ -208,14 +208,22 @@ $qgray: #6d6e71;
   @media (max-width: 767px) {
     background-image: none;
   }
+  .img-responsive{
+    display: none;
+    @media (min-width: 768px) and (max-width: 991px) {
+      display: block;
+    }
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
   .col-md-5 {
       background: white;
       height: 100vh;
   }
   .col-md-7 {
-    border-top: transparent solid 2000px;
-    border-right: white solid 500px;
-    height: 100vh;
+    border-top: transparent solid 100vh;
+    border-right: white solid 200px;
     @media (min-width: 768px) and (max-width: 991px) {
       border: none;
       height: auto;
@@ -232,6 +240,7 @@ $qgray: #6d6e71;
     font-weight: 300;
     text-align: left;
     padding-top: 50%;
+    text-transform: uppercase;
     @media (min-width: 768px) and (max-width: 991px) {
       padding-top: 50px;
       text-align: center;
@@ -264,27 +273,12 @@ $qgray: #6d6e71;
     padding-left: 0px;
     padding-right: 0px;
   }
-  .diagonal {
-    border: 570px #ffffff solid;
-    position: absolute;
-    top: 0;
-    left: -160px;
-    transform: rotate(15deg);
-    z-index: -1;
-    @media (min-width: 768px) and (max-width: 991px) {
-      display: none;
-    }
-    @media (max-width: 767px) {
-      display: none;
-    }
-  }
 }
 
-// Developement
-
-.development {
+// Top Section of interior pages
+.top-section {
   background: #fafafa;
-  padding: 100px 0;
+  padding: 150px 0;
   h1 {
     font-family: 'Lato', sans-serif;
     color: $qgray;
@@ -315,10 +309,33 @@ $qgray: #6d6e71;
     padding-left: 0px;
     padding-right: 0px;
   }
+  @media (min-width: 768px) and (max-width: 991px) {
+    padding: 60px 0 100px 0;
+    h1 {
+      font-size: 35px;
+    }
+    img{
+      padding-top: 50px;
+      width: 40px;
+    }
+  }
+  @media (max-width: 767px) {
+    padding: 60px 0 100px 0;
+    h1 {
+      font-size: 35px;
+    }
+    img{
+      padding-top: 50px;
+      width: 40px;
+    }
+  }
 }
 
+
+// Developement
+
 .development-btm {
-  padding: 200px 0;
+  padding: 300px 0;
   background-image:url(image-path("development.jpg"));
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -328,13 +345,94 @@ $qgray: #6d6e71;
   h1 {
     font-family: 'Lato', sans-serif;
     color: #ffffff;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 300;
     text-align: center;
     text-transform: uppercase;
   }
+  hr {
+    width: 100px;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    padding: 100px 0;
+    h1 {
+      font-size: 30px;
+    }
+  }
+  @media (max-width: 767px) {
+    padding: 100px 0;
+    h1 {
+      font-size: 30px;
+    }
+  }
 }
 
+//
+.concierge-1 {
+  @extend .project-home;
+  background-image:url(image-path("concierge-1.jpg"));
+  h1 {
+    padding-top: 40%;
+  }
+  p {
+    font-family: 'Lato', sans-serif;
+    color: #6d6e71;
+    font-weight: 300;
+  }
+  .arrow-right {
+    img{
+      display:block;
+      margin:0 auto;
+      padding-top: 50px;
+      @media (min-width: 768px) and (max-width: 991px) {
+        padding-top: 30px;
+        width: 40px;
+      }
+      @media (max-width: 767px) {
+        padding-top: 30px;
+        width: 40px;
+      }
+    }
+  }
+  .col-md-5 {
+    @media (min-width: 768px) and (max-width: 991px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @media (max-width: 767px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+.concierge-2 {
+  height: 80vh;
+  background-image:url(image-path("concierge-2.jpg"));
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.concierge-3{
+  @extend .concierge-1;
+  @extend .project-home;
+  background-image:url(image-path("concierge-3.jpg"));
+  .col-md-5 {
+    padding-left: 100px;
+  }
+  .col-md-7 {
+    border-left: white solid 200px;
+    border-right: none;
+  }
+}
+
+.concierge-4 {
+  @extend .concierge-2;
+  background-image:url(image-path("concierge-4.jpg"));
+}
 // Footer
 .footer-2 {
   p {
@@ -345,4 +443,30 @@ $qgray: #6d6e71;
   a {
     color:#ffffff;
   }
+}
+
+.concierge-5 {
+  @extend .concierge-1;
+  @extend .project-home;
+  background-image:url(image-path("concierge-5.jpg"));
+}
+
+.concierge-6 {
+  @extend .concierge-2;
+  background-image:url(image-path("concierge-6.jpg"));
+}
+
+.concierge-7{
+  @extend .concierge-3;
+  @extend .project-home;
+  background-image:url(image-path("concierge-7.jpg"));
+}
+.concierge-8 {
+  @extend .concierge-2;
+  background-image:url(image-path("concierge-8.jpg"));
+}
+.concierge-9 {
+  @extend .concierge-1;
+  @extend .project-home;
+  background-image:url(image-path("concierge-9.jpg"));
 }

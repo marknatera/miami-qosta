@@ -45,7 +45,7 @@
     })();
 
     (function($) {
-      $('.header-15-sub-home').each(function() {
+      $('.header-15-sub-home, .project-home, .development-btm, .concierge-1, .concierge-2, .concierge-3, .concierge-4, .concierge-5, .concierge-6, .concierge-7, .concierge-8, .concierge-9').each(function() {
         if (! isMobile.any() ) {
           $(this).parallax('50%', .3, true);
         } else {
@@ -55,19 +55,9 @@
     }(jQuery));
 
     (function($) {
-      $('.project-home').each(function() {
+      $('.project-home, .development-btm').each(function() {
         if (! isMobile.any() ) {
-          $(this).parallax('50%', .3, true);
-        } else {
-          $(this).css('background-attachment', 'initial')
-        }
-      })
-    }(jQuery));
-
-    (function($) {
-      $('.development-btm').each(function() {
-        if (! isMobile.any() ) {
-          $(this).parallax('50%', .3, true);
+          $(this).parallax('50%', 0, true);
         } else {
           $(this).css('background-attachment', 'initial')
         }
