@@ -531,3 +531,33 @@ $qgray: #6d6e71;
   @extend .sky-info;
   background-image:url(image-path("ocean-2.jpg"));
 }
+
+// Executive Concierge
+.executive {
+  @extend .sky;
+  .background {
+    background-image:url(image-path("executive.jpg"));
+  }
+}
+.executive-content {
+  @extend .home-content;
+}
+.executive-info {
+  @extend .sky-info;
+  background-image:url(image-path("executive-2.jpg"));
+}
+
+// Exotic Concierge
+.exotic {
+  @extend .sky;
+  .background {
+    background-image:url(image-path("exotic.jpg"));
+  }
+}
+.exotic-content {
+  @extend .home-content;
+}
+.exotic-info {
+  @extend .sky-info;
+  background-image:url(image-path("exotic-2.jpg"));
+}

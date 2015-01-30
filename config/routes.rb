@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get '/concierge' => 'pages#concierge'
   get '/sky-concierge' => 'pages#sky'
   get '/ocean-concierge' => 'pages#ocean'
+  get '/executive-concierge' => 'pages#executive'
+  get '/exotic-concierge' => 'pages#exotic'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
