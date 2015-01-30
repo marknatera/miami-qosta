@@ -289,6 +289,7 @@ $qgray: #6d6e71;
 .top-section {
   background: #fafafa;
   padding: 150px 0;
+  height: 100vh;
   h1 {
     font-family: 'Lato', sans-serif;
     color: $qgray;
@@ -341,6 +342,12 @@ $qgray: #6d6e71;
   }
 }
 
+// Bottom Section
+.bottom-section {
+  @extend .top-section;
+  padding: 25vh 0;
+  height: 80vh;
+}
 
 // Developement
 
@@ -578,11 +585,50 @@ $qgray: #6d6e71;
   background-image:url(image-path("time-2.jpg"));
 }
 
+// Investments Main Page
+.invest-1 {
+  @extend .header-15-sub;
+  padding-top: 100px;
+  .background {
+    background-image:url(image-path("invest-1.jpg"));
+    opacity: 1;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    @media (min-width: 768px) and (max-width: 991px) {
+      height: 100vh;
+    }
+    @media (max-width: 767px) {
+      height: 100vh;
+    }
+  }
+  h1 {
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 300;
+    text-align: left;
+  }
+  p{
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 300;
+    text-align: left;
+  }
+}
 
+.invest-2 {
+  @extend .concierge-2;
+  background-image:url(image-path("invest-2.jpg"));
+}
 
-
-
-
+.invest-3 {
+  @extend .concierge-3;
+  background-image:url(image-path("invest-3.jpg"));
+}
 
 // Footer
 .footer-2 {
