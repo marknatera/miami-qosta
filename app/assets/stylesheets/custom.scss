@@ -679,6 +679,31 @@
   background-image:url(image-path("integral-6.jpg"));
 }
 
+// Integral Interior Pages
+
+// Legal Page
+.legal {
+  @extend .sky;
+  .background {
+    background-image:url(image-path("legal-1.jpg"));
+  }
+}
+.legal-content {
+  @extend .home-content;
+}
+.legal-info {
+  @extend .sky-info;
+  background-image:url(image-path("legal-2.jpg"));
+}
+
+// VISA EB-5 Page
+.visa {
+  @extend .sky;
+  .background {
+    background-image:url(image-path("visa-1.jpg"));
+  }
+}
+
 // Footer
 .footer-2 {
   p {
