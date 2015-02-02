@@ -4,6 +4,10 @@
   transform: translateY(-50%);
 }
 
+hr {
+  width: 100px;
+}
+
 // Nav Bar
 .header-3 {
   .navbar-header{
@@ -817,6 +821,18 @@
   background-image:url(image-path("eb5-2.jpg"));
 }
 
+// Financing page
+.finance {
+  @extend .sky;
+  .background {
+    background-image:url(image-path("finance.jpg"));
+  }
+}
+
+.finance-info{
+  @extend .sky-info;
+  background-image:url(image-path("finance-1.jpg"));
+}
 
 // Footer
 .footer-2 {
