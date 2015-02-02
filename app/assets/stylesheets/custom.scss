@@ -1,3 +1,9 @@
+.v-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 // Nav Bar
 .header-3 {
   .navbar-header{
@@ -90,6 +96,7 @@
 
 .header-15-sub-home {
   @extend .header-15-sub;
+  height: 100vh;
   .background {
     background-image:url(image-path("home-main.jpg"));
     opacity: 1;
@@ -286,7 +293,6 @@
 // Top Section of interior pages
 .top-section {
   background: #fafafa;
-  padding: 150px 0;
   height: 100vh;
   h1 {
     font-family: 'Lato', sans-serif;
@@ -295,6 +301,7 @@
     font-weight: 300;
     text-align: center;
     margin-bottom: 40px;
+    margin-top: 0px;
     text-transform: uppercase;
   }
   hr {
@@ -343,8 +350,10 @@
 // Bottom Section
 .bottom-section {
   @extend .top-section;
-  padding: 25vh 0;
   height: 80vh;
+  p {
+    margin-top: 0px;
+  }
 }
 
 // Developement
@@ -482,6 +491,7 @@
 // Sky Concierge
 .sky {
   @extend .header-15-sub;
+  height: 100vh;
   .background {
     background-image:url(image-path("sky.jpg"));
     opacity: 1;
@@ -490,7 +500,6 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
   }
   h1 {
     font-family: 'Lato', sans-serif;
@@ -703,6 +712,111 @@
     background-image:url(image-path("visa-1.jpg"));
   }
 }
+.visa-2 {
+  @extend .concierge-1;
+  background-image:url(image-path("visa-2.jpg"));
+  h1 {
+    padding-top: 40%;
+    font-size: 35px;
+  }
+  hr {
+    width: 50px;
+    border-top: #000000 solid 1px;
+  }
+}
+
+.visa-3 {
+  @extend .top-section;
+  ul {
+    list-style-position: inside;
+  }
+  li{
+    font-family: 'Lato', sans-serif;
+    color: $qgray;
+    text-align: center;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 25px;
+  }
+  hr {
+    width: 50px;
+    border-top: #000000 solid 1px;
+  }
+}
+
+.visa-4 {
+  @extend .concierge-3;
+  background-image:url(image-path("visa-3.jpg"));
+  h1 {
+    text-align: left;
+    font-size: 35px;
+  }
+  p {
+    text-align: left;
+  }
+}
+
+.visa-5 {
+  @extend .visa-2;
+  background-image:url(image-path("visa-4.jpg"));
+}
+
+.visa-6 {
+  @extend .bottom-section;
+  height: 100vh;
+  h1 {
+    margin-top: 160px;
+  }
+  hr {
+    width: 50px;
+    border-top: #000000 solid 1px;
+  }
+}
+
+// EB5 Page
+.eb5 {
+  @extend .sky;
+  .background {
+    background-image:url(image-path("eb5-1.jpg"));
+  }
+}
+.eb5-content {
+  @extend .legal-content;
+  .eltop {
+      margin-top: 40px;
+  }
+  p {
+    text-align: center;
+  }
+  .delimiter {
+    margin-top: 70px;
+  }
+  hr {
+    width: 50px;
+    border-top: #000000 solid 1px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}
+.eb5-content2 {
+  @extend .eb5-content;
+  background: #fafafa;
+  hr {
+    width: 50px;
+    border-top: #000000 solid 1px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}
+.eb5-2 {
+  @extend .visa-2;
+  .col-md-10-loco {
+    @extend .col-md-10;
+    margin-top: 30%;
+  }
+  background-image:url(image-path("eb5-2.jpg"));
+}
+
 
 // Footer
 .footer-2 {
@@ -713,5 +827,15 @@
   }
   a {
     color:#ffffff;
+  }
+  .col-md-10 {
+    margin: 0 auto;
+    float: none;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    text-align: center;
+  }
+  @media (max-width: 767px) {
+    text-align: center;
   }
 }

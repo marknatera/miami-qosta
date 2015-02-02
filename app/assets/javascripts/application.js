@@ -29,3 +29,6 @@
 //= require selectFx
 //= require classie2
 //= require jquery.parallaxor
+//= require snap.svg-min
+//= require svgicons-config
+//= require svgicons
