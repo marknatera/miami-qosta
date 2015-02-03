@@ -8,6 +8,7 @@ hr {
   width: 100px;
 }
 
+
 // Nav Bar
 .header-3 {
   .navbar-header{
@@ -834,6 +835,97 @@ hr {
   background-image:url(image-path("finance-1.jpg"));
 }
 
+
+//Team Page
+.team {
+  .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+    @media (min-width: 768px) and (max-width: 991px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @media (max-width: 767px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .col-md-4 {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .col-md-8 {
+      padding-top: 40px;
+      border-bottom-width: 40px;
+      padding-bottom: 70px;
+    }
+  }
+  h1 {
+    font-family: 'Lato', sans-serif;
+    color: $qgray;
+    font-size: 35px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    @media (min-width: 768px) and (max-width: 991px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @media (max-width: 767px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  p {
+    font-family: 'Lato', sans-serif;
+    color: $qgray;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: left;
+    @media (min-width: 768px) and (max-width: 991px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @media (max-width: 767px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+// Contact Form
+.contact-mid {
+  background: $qgray;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  h2 {
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  p {
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+  }
+  hr {
+    width: 50px;
+  }
+}
+
+.contact-arrow {
+  p {
+    text-align: center;
+    margin-top: -35px;
+    color: $qgray;
+  }
+}
+
 // Footer
 .footer-2 {
   p {
@@ -850,8 +942,20 @@ hr {
   }
   @media (min-width: 768px) and (max-width: 991px) {
     text-align: center;
+    .pull-right {
+      float: none !important;
+    }
+    .pull-left {
+      float: none !important;
+    }
   }
   @media (max-width: 767px) {
     text-align: center;
+    .pull-right {
+      float: none !important;
+    }
+    .pull-left {
+      float: none !important;
+    }
   }
 }

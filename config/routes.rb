@@ -16,7 +16,8 @@ Rails.application.routes.draw do
   get '/integral-service/visa-eb5' => 'pages#visa'
   get '/integral-service/eb5-program' => 'pages#eb5'
   get '/integral-service/financing' => 'pages#financing'
-
+  get '/team' => 'pages#team'
+  get '/contact' => 'pages#contact'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

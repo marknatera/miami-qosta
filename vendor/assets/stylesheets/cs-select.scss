@@ -1,6 +1,6 @@
 /* Default custom select styles */
 div.cs-select {
-	top: 20px;
+	top: 38px;
 	left: 20px;
 	position: fixed;
 	display: inline-block;
@@ -30,7 +30,7 @@ div.cs-select:focus {
 	display: block;
 	position: relative;
 	cursor: pointer;
-	padding: 1em;
+	padding: 0 1em;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;

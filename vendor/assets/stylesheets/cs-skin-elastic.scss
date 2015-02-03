@@ -5,6 +5,8 @@ div.cs-skin-elastic {
 	font-weight: 300;
 	color: #6d6e71;
 	text-transform: uppercase;
+	border-bottom: $qgray solid 1px;
+	padding-bottom: 8px;
 	@media (min-width: 768px) and (max-width: 991px) {
 		display: none;
 	}
