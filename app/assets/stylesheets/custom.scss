@@ -927,6 +927,16 @@ hr {
 }
 
 .contact-form {
+  padding: 50px 0 120px 0;
+  .delimiter {
+    margin-top: 50px;
+  }
+  p {
+    color: $qgray;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+  }
   .form-control {
     color: $qgray;
     font-family: 'Lato', sans-serif;
@@ -941,6 +951,16 @@ hr {
   }
   .form-control:focus {
     box-shadow: 0 4px 2px -2px $gray;
+  }
+  .btn-contact {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 50px;
+    border: $qgray solid 2px;
+    border-radius: 0px;
+    background: none;
+    color: $qgray;
   }
 }
 

@@ -22,8 +22,11 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    @contact.save
-    respond_with(@contact)
+    if @contact.save
+      redirect_to root_path
+    else
+      render :action => 'new'
+    end
   end
 
   def update
