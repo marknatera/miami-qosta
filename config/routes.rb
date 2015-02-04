@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :contacts
+
   root to: 'pages#home'
 
   get '/development' => 'pages#development'
@@ -17,7 +19,7 @@ Rails.application.routes.draw do
   get '/integral-service/eb5-program' => 'pages#eb5'
   get '/integral-service/financing' => 'pages#financing'
   get '/team' => 'pages#team'
-  get '/contact' => 'pages#contact'
+  get '/contact' => 'contacts#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
