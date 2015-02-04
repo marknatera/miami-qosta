@@ -16,7 +16,7 @@
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <p>What Are You Interested In?</p>
-        <%= f.select :interest, { style: 'width:100%'} do %>
+        <%= f.select :interest do %>
           <% [['Investments'], ['Concierge'], ['New Developments'], ['Existing Developments'], ['Residence']].each do |i| %>
             <%= content_tag(:option, i.first) %>
           <% end %>
