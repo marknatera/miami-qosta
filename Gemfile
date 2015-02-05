@@ -29,7 +29,8 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem 'font-awesome-rails', '~> 4.3.0.0'
 gem 'devise', '~> 3.4.1'
 gem 'sendgrid', '~> 1.2.0'
-
+gem 'activeadmin', github: 'activeadmin', branch: 'master'
+gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'master'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

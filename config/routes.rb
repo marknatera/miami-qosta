@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :contacts
 
   root to: 'pages#home'
@@ -19,7 +21,7 @@ Rails.application.routes.draw do
   get '/integral-service/eb5-program' => 'pages#eb5'
   get '/integral-service/financing' => 'pages#financing'
   get '/team' => 'pages#team'
-  get '/contact' => 'contacts#new'
+  get '/contact' => 'contacts#new', as: 'contact_email'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
