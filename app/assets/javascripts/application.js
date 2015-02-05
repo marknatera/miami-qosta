@@ -12,9 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require_tree .
+
 //= require custom
 //= require jquery.scrollTo-1.4.3.1-min
 //= require modernizr.custom
@@ -32,3 +33,7 @@
 //= require snap.svg-min
 //= require svgicons-config
 //= require svgicons
+//= require classie-loader
+//= require main-loader
+//= require modernizr.custom-loader
+//= require pathLoader
