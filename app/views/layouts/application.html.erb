@@ -22,6 +22,7 @@
   </header>
 </div><!-- /container -->
   <a class="menu" id="showRightPush">MENU<%= image_tag "hamburger.svg" %></a>
+
   <div>
   <select class="cs-select cs-skin-elastic">
     <option value="" disabled selected>Language</option>
@@ -37,6 +38,7 @@
 
 
   <div class="page-wrapper">
+    <div id="bkg-overlay"></div>
 
     <%= render 'layouts/header' %>
 
@@ -51,6 +53,10 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   <script>
+  $( "#showRightPush" ).click(function() {
+    $( "#bkg-overlay" ).toggle();
+  });
+  
 
     (function() {
       [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
@@ -89,6 +95,13 @@
 
     })();
   </script>
+  <!-- function dim(bool)
+  {
+    if (typeof bool=='undefined') bool=true; // so you can shorten dim(true) to dim()
+    document.getElementById('bkg-overlay').style.display=(bool?'block':'none');
+  }
+  dim(true); // on
+  dim(false); // off -->
 
 </body>
 </html>
