@@ -13,9 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require turbolinks
 //= require bootstrap-sprockets
-
 //= require custom
 //= require jquery.scrollTo-1.4.3.1-min
 //= require modernizr.custom
