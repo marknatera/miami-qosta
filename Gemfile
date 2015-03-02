@@ -31,6 +31,13 @@ gem 'devise', '~> 3.4.1'
 gem 'sendgrid', '~> 1.2.0'
 gem 'activeadmin', github: 'activeadmin', branch: 'master'
 gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'master'
+gem 'newrelic_rpm'
+gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'better_errors', '~> 2.1.1'
+gem 'binding_of_caller', '~> 0.7.2'
+gem 'awesome_print', '~> 1.6.1'
+gem 'paperclip', '~> 4.2.1'
+gem 'aws-sdk', '< 2.0'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
