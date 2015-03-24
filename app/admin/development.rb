@@ -4,7 +4,7 @@ ActiveAdmin.register Development do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :development_type_id, :name, :address, :decription, amenities_attributes: [:id, :name, :_destroy], building_services_attributes: [:id, :name, :_destroy], residences_attributes: [:id, :title, :_destroy], :penthouse, :payment_schedule
+  permit_params :development_type_id, :name, :address, :decription, :penthouse, :payment_schedule,amenities_attributes: [:id, :name, :_destroy], building_services_attributes: [:id, :name, :_destroy], residences_attributes: [:id, :title, :_destroy]
   #
   # or
   #
