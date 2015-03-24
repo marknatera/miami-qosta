@@ -4,7 +4,7 @@ ActiveAdmin.register Development do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :development_type_id, :name, :address, amenities_attributes: [:id, :name, :_destroy]
+  permit_params :development_type_id, :name, :address, amenities_attributes: [:id, :name, :_destroy], building_services_attributes: [:id, :name, :_destroy]
   #
   # or
   #
@@ -24,6 +24,12 @@ ActiveAdmin.register Development do
       a.input :name
       a.input :_destroy, :as=>:boolean, :label=>'Remove'
     end
+    f.has_many :building_services do |a|
+      a.input :name
+      a.input :_destroy, :as=>:boolean, :label=>'Remove'
+    end
+    f.input :building_info, as: :ckeditor
+    f.input :description, as: :ckeditor
   end
   f.actions
 end
