@@ -4,7 +4,7 @@ ActiveAdmin.register Development do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :development_type_id, :name, :address, amenities_attributes: [:id, :name, :_destroy], building_services_attributes: [:id, :name, :_destroy], residences_attributes: [:id, :title, :_destroy]
+  permit_params :development_type_id, :name, :address, :decription, amenities_attributes: [:id, :name, :_destroy], building_services_attributes: [:id, :name, :_destroy], residences_attributes: [:id, :title, :_destroy], :penthouse, :payment_schedule
   #
   # or
   #
@@ -14,14 +14,13 @@ ActiveAdmin.register Development do
   #   permitted
   # end
 
-
   form do |f|
   f.inputs "Development Details" do
     f.input :development_type
     f.input :name
     f.input :address
-    f.input :building_info, as: :ckeditor
     f.input :description, as: :ckeditor
+    f.input :building_info, as: :ckeditor
     f.has_many :amenities do |a|
       a.input :name
       a.input :_destroy, :as=>:boolean, :label=>'Remove'
@@ -34,6 +33,8 @@ ActiveAdmin.register Development do
       a.input :title
       a.input :_destroy, :as=>:boolean, :label=>'Remove'
     end
+    f.input :penthouse, as: :ckeditor
+    f.input :payment_schedule, as: :ckeditor
   end
   f.actions
 end
