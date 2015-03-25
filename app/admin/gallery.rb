@@ -21,6 +21,7 @@ ActiveAdmin.register Gallery do
       f.input :name
       f.has_many :pictures do |a|
         a.input :name
+        a.input :description
         a.input :image
         a.input :_destroy, :as=>:boolean, :label=>'Remove'
       end

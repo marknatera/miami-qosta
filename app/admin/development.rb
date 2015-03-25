@@ -46,6 +46,7 @@ ActiveAdmin.register Development do
         a.input :name
         a.has_many :pictures do |pic|
           pic.input :name
+          pic.input :description
           pic.input :image
           pic.input :_destroy, :as=>:boolean, :label=>'Remove'
         end
