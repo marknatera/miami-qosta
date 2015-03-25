@@ -23,11 +23,120 @@ class Development < ActiveRecord::Base
     :convert_options => {
     :admin    => '-set colorspace sRGB -strip',
     :retina   => '-set colorspace sRGB -strip -sharpen 0x0.5'
+  }
+
+
+  has_attached_file :amenities_image,
+  :storage => :s3,
+  :s3_credentials => Proc.new{|a| a.instance.s3_credentials },
+  # :path => ":rails_root/public/system/:attachment/:id/:basename_:style.:extension",
+  :path => '/:class/:id/:style/:filename',
+  # :url => "/system/:attachment/:id/:basename_:style.:extension",
+  :url =>':s3_domain_url',
+
+
+  :styles => {
+    :admin    => ['100x100#',  :jpg, :quality => 70],
+    :retina   => ['1200>',     :jpg, :quality => 50]
   },
 
+    :convert_options => {
+    :admin    => '-set colorspace sRGB -strip',
+    :retina   => '-set colorspace sRGB -strip -sharpen 0x0.5'
+  }
+
+
+  has_attached_file :services_image,
+  :storage => :s3,
+  :s3_credentials => Proc.new{|a| a.instance.s3_credentials },
+  # :path => ":rails_root/public/system/:attachment/:id/:basename_:style.:extension",
+  :path => '/:class/:id/:style/:filename',
+  # :url => "/system/:attachment/:id/:basename_:style.:extension",
+  :url =>':s3_domain_url',
+
+
+  :styles => {
+    :admin    => ['100x100#',  :jpg, :quality => 70],
+    :retina   => ['1200>',     :jpg, :quality => 50]
+  },
+
+    :convert_options => {
+    :admin    => '-set colorspace sRGB -strip',
+    :retina   => '-set colorspace sRGB -strip -sharpen 0x0.5'
+  }
+
+  has_attached_file :residence_image,
+  :storage => :s3,
+  :s3_credentials => Proc.new{|a| a.instance.s3_credentials },
+  # :path => ":rails_root/public/system/:attachment/:id/:basename_:style.:extension",
+  :path => '/:class/:id/:style/:filename',
+  # :url => "/system/:attachment/:id/:basename_:style.:extension",
+  :url =>':s3_domain_url',
+
+
+  :styles => {
+    :admin    => ['100x100#',  :jpg, :quality => 70],
+    :retina   => ['1200>',     :jpg, :quality => 50]
+  },
+
+    :convert_options => {
+    :admin    => '-set colorspace sRGB -strip',
+    :retina   => '-set colorspace sRGB -strip -sharpen 0x0.5'
+  }
+
+  has_attached_file :penthouse_image,
+  :storage => :s3,
+  :s3_credentials => Proc.new{|a| a.instance.s3_credentials },
+  # :path => ":rails_root/public/system/:attachment/:id/:basename_:style.:extension",
+  :path => '/:class/:id/:style/:filename',
+  # :url => "/system/:attachment/:id/:basename_:style.:extension",
+  :url =>':s3_domain_url',
+
+
+  :styles => {
+    :admin    => ['100x100#',  :jpg, :quality => 70],
+    :retina   => ['1200>',     :jpg, :quality => 50]
+  },
+
+    :convert_options => {
+    :admin    => '-set colorspace sRGB -strip',
+    :retina   => '-set colorspace sRGB -strip -sharpen 0x0.5'
+  }
+
+  has_attached_file :area_and_floorplan_image,
+  :storage => :s3,
+  :s3_credentials => Proc.new{|a| a.instance.s3_credentials },
+  # :path => ":rails_root/public/system/:attachment/:id/:basename_:style.:extension",
+  :path => '/:class/:id/:style/:filename',
+  # :url => "/system/:attachment/:id/:basename_:style.:extension",
+  :url =>':s3_domain_url',
+
+
+  :styles => {
+    :admin    => ['100x100#',  :jpg, :quality => 70],
+    :retina   => ['1200>',     :jpg, :quality => 50]
+  },
+
+    :convert_options => {
+    :admin    => '-set colorspace sRGB -strip',
+    :retina   => '-set colorspace sRGB -strip -sharpen 0x0.5'
+  }
+
+  has_attached_file :floorplan_pdf,
+  :storage => :s3,
+  :s3_credentials => Proc.new{|a| a.instance.s3_credentials },
+  # :path => ":rails_root/public/system/:attachment/:id/:basename_:style.:extension",
+  :path => '/:class/:id/:style/:filename',
+  # :url => "/system/:attachment/:id/:basename_:style.:extension",
+  :url =>':s3_domain_url'
 
   validates_attachment_content_type :featured_image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
-
+  validates_attachment_content_type :amenities_image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  validates_attachment_content_type :services_image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  validates_attachment_content_type :residence_image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  validates_attachment_content_type :penthouse_image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  validates_attachment_content_type :area_and_floorplan_image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  validates_attachment_content_type :floorplan_pdf, :content_type =>['application/pdf']
 
 
   def s3_credentials

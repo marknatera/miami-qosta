@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150325113350) do
+ActiveRecord::Schema.define(version: 20150325121000) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -83,8 +83,8 @@ ActiveRecord::Schema.define(version: 20150325113350) do
     t.text     "description"
     t.text     "building_info"
     t.string   "area_url"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.integer  "development_type_id"
     t.text     "payment_schedule"
     t.text     "penthouse"
@@ -92,6 +92,30 @@ ActiveRecord::Schema.define(version: 20150325113350) do
     t.string   "featured_image_content_type"
     t.integer  "featured_image_file_size"
     t.datetime "featured_image_updated_at"
+    t.string   "amenities_image_file_name"
+    t.string   "amenities_image_content_type"
+    t.integer  "amenities_image_file_size"
+    t.datetime "amenities_image_updated_at"
+    t.string   "services_image_file_name"
+    t.string   "services_image_content_type"
+    t.integer  "services_image_file_size"
+    t.datetime "services_image_updated_at"
+    t.string   "residence_image_file_name"
+    t.string   "residence_image_content_type"
+    t.integer  "residence_image_file_size"
+    t.datetime "residence_image_updated_at"
+    t.string   "penthouse_image_file_name"
+    t.string   "penthouse_image_content_type"
+    t.integer  "penthouse_image_file_size"
+    t.datetime "penthouse_image_updated_at"
+    t.string   "area_and_floorplan_image_file_name"
+    t.string   "area_and_floorplan_image_content_type"
+    t.integer  "area_and_floorplan_image_file_size"
+    t.datetime "area_and_floorplan_image_updated_at"
+    t.string   "floorplan_pdf_file_name"
+    t.string   "floorplan_pdf_content_type"
+    t.integer  "floorplan_pdf_file_size"
+    t.datetime "floorplan_pdf_updated_at"
   end
 
   create_table "residences", force: :cascade do |t|
