@@ -15,35 +15,43 @@ ActiveAdmin.register Development do
   # end
 
   form do |f|
-  f.inputs "Development Details" do
-    f.input :development_type
-    f.input :name
-    f.input :featured_image
-    f.input :address
-    f.input :description, as: :ckeditor
-    f.input :building_info, as: :ckeditor
-    f.input :amenities_image
-    f.has_many :amenities do |a|
-      a.input :name
-      a.input :_destroy, :as=>:boolean, :label=>'Remove'
+    f.inputs "Development Details" do
+      f.input :development_type
+      f.input :name
+      f.input :featured_image
+      f.input :address
+      f.input :description, as: :ckeditor
+      f.input :building_info, as: :ckeditor
+      f.input :amenities_image
+      f.has_many :amenities do |a|
+        a.input :name
+        a.input :_destroy, :as=>:boolean, :label=>'Remove'
+      end
+      f.input :services_image
+      f.has_many :building_services do |a|
+        a.input :name
+        a.input :_destroy, :as=>:boolean, :label=>'Remove'
+      end
+      f.input :residence_image
+      f.has_many :residences do |a|
+        a.input :title
+        a.input :_destroy, :as=>:boolean, :label=>'Remove'
+      end
+      f.input :penthouse_image
+      f.input :penthouse, as: :ckeditor
+      f.input :payment_schedule, as: :ckeditor
+      f.input :area_and_floorplan_image
+      f.input :floorplan_pdf
+      f.has_many :galleries do |a|
+        a.input :name
+        a.has_many :pictures do |pic|
+          pic.input :name
+          pic.input :image
+          pic.input :_destroy, :as=>:boolean, :label=>'Remove'
+        end
+      end
     end
-    f.input :services_image
-    f.has_many :building_services do |a|
-      a.input :name
-      a.input :_destroy, :as=>:boolean, :label=>'Remove'
-    end
-    f.input :residence_image
-    f.has_many :residences do |a|
-      a.input :title
-      a.input :_destroy, :as=>:boolean, :label=>'Remove'
-    end
-    f.input :penthouse_image
-    f.input :penthouse, as: :ckeditor
-    f.input :payment_schedule, as: :ckeditor
-    f.input :area_and_floorplan_image
-    f.input :floorplan_pdf
+    f.actions
   end
-  f.actions
-end
 
 end

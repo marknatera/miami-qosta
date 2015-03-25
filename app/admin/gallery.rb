@@ -4,7 +4,7 @@ ActiveAdmin.register Gallery do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  # permit_params :list, :of, :attributes, :on, :model
+  permit_params :development_id, :name, pictures_attributes: [:id, :name, :image, :_destroy]
   #
   # or
   #
@@ -17,6 +17,7 @@ ActiveAdmin.register Gallery do
 
   form do |f|
     f.inputs "Gallery Details" do
+      f.input :development
       f.input :name
       f.has_many :pictures do |a|
         a.input :name
