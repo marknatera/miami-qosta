@@ -4,7 +4,7 @@ ActiveAdmin.register Development do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :development_type_id, :name, :featured_image, :address, :decription, :building_info, :amenities_image,:services_image, :residence_image, :penthouse_image, :area_and_floorplan_image, :floorplan_pdf, :penthouse, :payment_schedule, amenities_attributes: [:id, :name, :_destroy], building_services_attributes: [:id, :name, :_destroy], residences_attributes: [:id, :title, :_destroy]
+  permit_params :development_type_id, :name, :featured_image, :address, :description, :building_info, :amenities_image, :services_image, :residence_image, :penthouse_image, :area_and_floorplan_image, :floorplan_pdf, :penthouse, :payment_schedule, :area_url, amenities_attributes: [:id, :name, :_destroy], building_services_attributes: [:id, :name, :_destroy], residences_attributes: [:id, :title, :_destroy], galleries_attributes: [:id, :name, pictures_attributes: [:id, :name, :description, :image, :_destroy]]
   #
   # or
   #
@@ -37,11 +37,6 @@ ActiveAdmin.register Development do
         a.input :title
         a.input :_destroy, :as=>:boolean, :label=>'Remove'
       end
-      f.input :penthouse_image
-      f.input :penthouse, as: :ckeditor
-      f.input :payment_schedule, as: :ckeditor
-      f.input :area_and_floorplan_image
-      f.input :floorplan_pdf
       f.has_many :galleries do |a|
         a.input :name
         a.has_many :pictures do |pic|
@@ -51,6 +46,12 @@ ActiveAdmin.register Development do
           pic.input :_destroy, :as=>:boolean, :label=>'Remove'
         end
       end
+      f.input :penthouse_image
+      f.input :penthouse, as: :ckeditor
+      f.input :payment_schedule, as: :ckeditor
+      f.input :area_and_floorplan_image
+      f.input :area_url
+      f.input :floorplan_pdf
     end
     f.actions
   end
