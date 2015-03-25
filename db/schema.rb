@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150324150720) do
+ActiveRecord::Schema.define(version: 20150325113350) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -83,11 +83,15 @@ ActiveRecord::Schema.define(version: 20150324150720) do
     t.text     "description"
     t.text     "building_info"
     t.string   "area_url"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.integer  "development_type_id"
     t.text     "payment_schedule"
     t.text     "penthouse"
+    t.string   "featured_image_file_name"
+    t.string   "featured_image_content_type"
+    t.integer  "featured_image_file_size"
+    t.datetime "featured_image_updated_at"
   end
 
   create_table "residences", force: :cascade do |t|
