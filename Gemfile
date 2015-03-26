@@ -30,6 +30,7 @@ gem 'font-awesome-rails', '~> 4.3.0.0'
 gem 'devise', '~> 3.4.1'
 gem 'sendgrid', '~> 1.2.0'
 gem 'activeadmin', github: 'activeadmin', branch: 'master'
+gem "active_admin_import" , github: "Fivell/active_admin_import"
 gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'master'
 gem 'newrelic_rpm'
 gem 'ckeditor', github: 'galetahub/ckeditor'
@@ -55,11 +56,13 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  gem 'pg' # Postgresql DB
 end
 
 group :production do
   gem 'pg' # Postgresql DB
   gem 'rails_12factor' # Heroku asset handler
 end
+
+
+ruby "2.2.0"
