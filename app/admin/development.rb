@@ -5,7 +5,7 @@ ActiveAdmin.register Development do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :development_type_id, :name, :featured_image, :address, :description, :building_info, :amenities_image, :services_image, :residence_image, :penthouse_image, :area_and_floorplan_image, :floorplan_pdf, :penthouse, :payment_schedule, :area_url, amenities_attributes: [:id, :name, :_destroy], building_services_attributes: [:id, :name, :_destroy], residences_attributes: [:id, :title, :_destroy], galleries_attributes: [:id, :name, pictures_attributes: [:id, :name, :description, :image, :_destroy]]
+  permit_params :development_type_id, :name, :featured_image, :address, :description, :building_info, :amenities_image, :services_image, :residence_image, :penthouse_image, :area_and_floorplan_image, :floorplan_pdf, :penthouse, :payment_schedule, :area_url, amenities_attributes: [:id, :name, :_destroy], building_services_attributes: [:id, :name, :_destroy], residence_types_attributes: [:id, :name, :_destroy], residences_attributes: [:id, :title, :_destroy], galleries_attributes: [:id, :name, pictures_attributes: [:id, :name, :description, :image, :_destroy]]
   #
   # or
   #
@@ -14,6 +14,7 @@ ActiveAdmin.register Development do
   #   permitted << :other if resource.something?
   #   permitted
   # end
+
 
   form do |f|
     f.inputs "Development Details" do
@@ -34,7 +35,11 @@ ActiveAdmin.register Development do
         a.input :_destroy, :as=>:boolean, :label=>'Remove'
       end
       f.input :residence_image
-      f.has_many :residences do |a|
+      f.has_many :residence_types, heading: 'Residence Types' do |a|
+        a.input :name
+        a.input :_destroy, :as=>:boolean, :label=>'Remove'
+      end
+      f.has_many :residences, heading: 'Residence Features' do |a|
         a.input :title
         a.input :_destroy, :as=>:boolean, :label=>'Remove'
       end
