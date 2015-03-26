@@ -20,7 +20,7 @@ class Development < ActiveRecord::Base
 
   :styles => {
     :admin    => ['100x100#',  :jpg, :quality => 70],
-    :retina   => ['1200>',     :jpg, :quality => 50]
+    :retina   => ['1920>',     :jpg, :quality => 100]
   },
 
     :convert_options => {
@@ -40,7 +40,7 @@ class Development < ActiveRecord::Base
 
   :styles => {
     :admin    => ['100x100#',  :jpg, :quality => 70],
-    :retina   => ['1200>',     :jpg, :quality => 50]
+    :retina   => ['1920>',     :jpg, :quality => 100]
   },
 
     :convert_options => {
@@ -60,7 +60,7 @@ class Development < ActiveRecord::Base
 
   :styles => {
     :admin    => ['100x100#',  :jpg, :quality => 70],
-    :retina   => ['1200>',     :jpg, :quality => 50]
+    :retina   => ['1920>',     :jpg, :quality => 100]
   },
 
     :convert_options => {
@@ -79,7 +79,7 @@ class Development < ActiveRecord::Base
 
   :styles => {
     :admin    => ['100x100#',  :jpg, :quality => 70],
-    :retina   => ['1200>',     :jpg, :quality => 50]
+    :retina   => ['1920>',     :jpg, :quality => 100]
   },
 
     :convert_options => {
@@ -98,7 +98,7 @@ class Development < ActiveRecord::Base
 
   :styles => {
     :admin    => ['100x100#',  :jpg, :quality => 70],
-    :retina   => ['1200>',     :jpg, :quality => 50]
+    :retina   => ['1920>',     :jpg, :quality => 100]
   },
 
     :convert_options => {
@@ -117,7 +117,7 @@ class Development < ActiveRecord::Base
 
   :styles => {
     :admin    => ['100x100#',  :jpg, :quality => 70],
-    :retina   => ['1200>',     :jpg, :quality => 50]
+    :retina   => ['1920>',     :jpg, :quality => 100]
   },
 
     :convert_options => {

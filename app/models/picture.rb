@@ -14,7 +14,7 @@ class Picture < ActiveRecord::Base
     :admin    => ['100x100#',  :jpg, :quality => 70],
     :thumb    => ['250x250#',  :jpg, :quality => 70],
     :preview  => ['500x500#',  :jpg, :quality => 70],
-    :retina   => ['1200>',     :jpg, :quality => 30]
+    :retina   => ['1920>',     :jpg, :quality => 100]
   },
 
   :convert_options => {
