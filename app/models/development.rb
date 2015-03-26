@@ -6,9 +6,9 @@ class Development < ActiveRecord::Base
 
   has_many :amenities, :dependent => :destroy
   has_many :building_services, :dependent => :destroy
-  has_many :residences, :dependent => :destroy
+  has_many :residence_features, :dependent => :destroy
   has_many :residence_types, :dependent => :destroy
-  accepts_nested_attributes_for :amenities, :building_services, :residences, :residence_types, allow_destroy: true
+  accepts_nested_attributes_for :amenities, :building_services, :residence_features, :residence_types, allow_destroy: true
 
   has_attached_file :featured_image,
   :storage => :s3,
