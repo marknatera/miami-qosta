@@ -1,0 +1,33 @@
+<section class="development-featured" style="background-image: url(<%= @development.featured_image %>)">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1><%= @development.name %></h1>
+        <hr>
+      </div>
+    </div>
+  </div>
+  <a href="#decription"><%= image_tag 'arrow-down-white.svg', class: 'scroll-down' %></a>
+</section>
+<section class="development-content" id="decription">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1><%= @development.address %></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="col-sm-6">
+            <%= raw @development.description %>
+          </div>
+          <div class="col-sm-6">
+            <p><strong><%= @development.name %></strong></p>
+            <%= raw @development.building_info %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

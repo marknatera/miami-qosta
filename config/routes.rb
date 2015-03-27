@@ -4,11 +4,15 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :contacts
-  resources :develpments
+
+  resources :developments
+
+  get '/new-developments' => 'developments#new_developments_index'
+
 
   root to: 'pages#home'
 
-  get '/development' => 'pages#development'
+  # get '/development' => 'pages#development'
   get '/concierge' => 'pages#concierge'
   get '/concierge/sky-concierge' => 'pages#sky'
   get '/concierge/ocean-concierge' => 'pages#ocean'
@@ -24,6 +28,10 @@ Rails.application.routes.draw do
   get '/integral-service/financing' => 'pages#financing'
   get '/team' => 'pages#team'
   get '/contact' => 'contacts#new', as: 'contact_email'
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
