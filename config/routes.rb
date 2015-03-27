@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'developments/new_developments'
-
-  get 'developments/existing_developments'
-
-  get 'developments/residences'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
