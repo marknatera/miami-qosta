@@ -36,3 +36,4 @@
 //= require main-loader
 //= require modernizr.custom-loader
 //= require pathLoader
+//= require masterslider

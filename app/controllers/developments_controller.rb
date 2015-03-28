@@ -22,6 +22,11 @@ class DevelopmentsController < ApplicationController
 
   def set_development
     @development = Development.find(params[:id])
+    @development.amenities.build
+    @development.building_services.build
+    @development.residence_types.build
+    @development.residence_features.build
+    @development.galleries.build
   end
 
 end
