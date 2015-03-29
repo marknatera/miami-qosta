@@ -62,14 +62,17 @@
          <div class="col-xs-12 col-sm-5 col-sm-offset-1">
            <h1>Building Services</h1>
            <ul>
-             <% @development.building_services.limit(7).each do |n| %>
-              <% if n.name? %>
+             <%# raise %>
+            <% if @development.building_services.count == 0 %>
+              <li>Coming Soon</li>
+              <hr>
+            <% else %>
+              <% @development.building_services.limit(7).each do |n| %>
                 <li><%= n.name %></li>
-              <% else n.name.blank? %>
-                <li>Coming Soon</li>
+                <hr>
               <% end %>
-               <hr>
-             <% end %>
+
+            <% end %>
            </ul>
          </div>
        </div>
