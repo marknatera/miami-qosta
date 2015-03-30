@@ -121,7 +121,7 @@
               <li>Coming Soon</li>
               <hr>
             <% else %>
-              <% @development.building_services.limit(7).each do |n| %>
+              <% @development.building_services.limit(6).each do |n| %>
                 <li><%= n.name %></li>
                 <hr>
               <% end %>
@@ -161,7 +161,7 @@
                 <% if @development.building_services.count == 0 %>
                   <li>Residence Styles Coming Soon</li>
                 <% else %>
-                  <% @development.residence_types.each do |n| %>
+                  <% @development.residence_types.limit(3).each do |n| %>
                     <li><%= n.name %></li>
                   <% end %>
                 <% end %>
@@ -293,3 +293,16 @@
     </div>
   </div>
 </section>
+
+<script charset="utf-8">
+  var slider = new MasterSlider();
+  slider.setup('masterslider' , {
+          width:1920,    // slider standard width
+          height:1080,   // slider standard height
+          space:5
+          // more slider options goes here...
+          // check slider options section in documentation for more options.
+      });
+  // adds Arrows navigation control to the slider.
+  slider.control('arrows');
+</script>
