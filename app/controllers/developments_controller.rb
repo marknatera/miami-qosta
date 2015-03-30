@@ -18,6 +18,7 @@ class DevelopmentsController < ApplicationController
   def show
   end
 
+
   private
 
   def set_development

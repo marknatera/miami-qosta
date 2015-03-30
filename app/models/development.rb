@@ -147,4 +147,13 @@ class Development < ActiveRecord::Base
     {:bucket => ENV['AWS_BUCKET'], :access_key_id => ENV["access_key_id"], :secret_access_key => ENV["secret_access_key"]}
   end
 
+
+  def next
+    Development.where(["id > ?", id]).first
+  end
+
+  def previous
+    Development.where(["id < ?", id]).last
+  end
+
 end

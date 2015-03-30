@@ -1,14 +1,30 @@
+<% if @development.featured_image.blank? %>
 <section class="development-featured" style="background-image: url(<%= @development.featured_image %>)">
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12">
-        <h1><%= @development.name %></h1>
-        <hr>
+        <h1 style="color:black;"><%= @development.name %></h1>
+        <hr style="border-top: solid black 1px;">
       </div>
     </div>
   </div>
-  <a href="#decription"><%= image_tag 'arrow-down-white.svg', class: 'scroll-down' %></a>
+  <a href="#decription"><%= image_tag 'arrow-down-gray.svg', class: 'scroll-down' %></a>
 </section>
+<% else %>
+  <section class="development-featured" style="background-image: url(<%= @development.featured_image %>)">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1><%= @development.name %></h1>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <a href="#decription"><%= image_tag 'arrow-down-white.svg', class: 'scroll-down' %></a>
+  </section>
+<% end %>
+
+
 <section class="development-content" id="decription">
   <div class="container-fluid">
     <div class="row">
@@ -20,32 +36,19 @@
       <div class="col-xs-12">
         <div class="col-xs-12 col-sm-10 col-sm-offset-1">
           <div class="col-sm-6">
-            <%= raw @development.description %>
+            <% if @development.description.blank? %>
+              <p>Description about this property coming soon.</p>
+            <% else %>
+              <%= raw @development.description %>
+            <% end %>
           </div>
           <div class="col-xs-12 col-sm-5 col-sm-offset-1">
-            <p><strong><%= @development.name %></strong></p>
-            <%= raw @development.building_info %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="development-amenities" style="background-image: url(<%= @development.amenities_image %>)">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-7">
-      </div>
-      <div class="col-md-5">
-        <div class="row">
-          <div class="col-md-10">
-            <h1>Building Ameneties</h1>
-            <ul>
-              <% @development.amenities.limit(7).each do |n| %>
-                <li><%= n.name %></li>
-                <hr>
-              <% end %>
-            </ul>
+            <% if @development.building_info.blank? %>
+              <p><strong>Building Facts coming soon</strong></p>
+            <% else %>
+              <p><strong><%= @development.name %></strong></p>
+              <%= raw @development.building_info %>
+            <% end %>
           </div>
         </div>
       </div>
@@ -54,15 +57,65 @@
 </section>
 
 
+<% if @development.amenities_image.blank? %>
+  <section class="development-payment">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <h1>Building Ameneties Coming Soon</h1>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </section>
+<% else %>
+  <section class="development-amenities" style="background-image: url(<%= @development.amenities_image %>)">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-7">
+        </div>
+        <div class="col-md-5">
+          <div class="row">
+            <div class="col-md-10">
+              <h1>Building Ameneties</h1>
+              <ul>
+                <% if @development.amenities.count == 0 %>
+                  <li>Coming Soon</li>
+                  <hr>
+                <% else %>
+                  <% @development.amenities.limit(7).each do |n| %>
+                    <li><%= n.name %></li>
+                    <hr>
+                  <% end %>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<% end %>
 
 
+<% if @development.services_image.blank? %>
+  <section class="development-no-gallery">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <h1>Building Services Coming Soon</h1>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </section>
+<% else %>
   <section class="development-services" style="background-image: url(<%= @development.services_image %>)">
     <div class="container-fluid">
        <div class="row">
          <div class="col-xs-12 col-sm-5 col-sm-offset-1">
            <h1>Building Services</h1>
            <ul>
-             <%# raise %>
             <% if @development.building_services.count == 0 %>
               <li>Coming Soon</li>
               <hr>
@@ -78,77 +131,162 @@
        </div>
     </div>
   </section>
+<% end %>
 
 
-
-<section class="development-residence" style="background-image: url(<%= @development.residence_image %>)">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-7">
+<% if @development.residence_image.blank? %>
+  <section class="development-payment">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <h1>Residence Information Coming Soon</h1>
+          <hr>
+        </div>
       </div>
-      <div class="col-md-5">
-        <div class="row">
-          <div class="col-md-10">
-            <h1>RESIDENCES</h1>
-            <ul>
-              <% @development.residence_types.each do |n| %>
-                <li><%= n.name %></li>
-              <% end %>
-            </ul>
-            <ul>
-              <% @development.residence_features.limit(4).each do |n| %>
-                <li><%= n.name %></li>
-                <hr>
-              <% end %>
-            </ul>
+    </div>
+  </section>
+<% else %>
+  <section class="development-residence" style="background-image: url(<%= @development.residence_image %>)">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-7">
+        </div>
+        <div class="col-md-5">
+          <div class="row">
+            <div class="col-md-10">
+              <h1>RESIDENCES</h1>
+              <ul>
+                <% if @development.building_services.count == 0 %>
+                  <li>Residence Styles Coming Soon</li>
+                <% else %>
+                  <% @development.residence_types.each do |n| %>
+                    <li><%= n.name %></li>
+                  <% end %>
+                <% end %>
+              </ul>
+              <ul>
+                <% if @development.residence_features.count == 0 %>
+                  <li>Residence Features Coming Soon</li>
+                <% else %>
+                  <% @development.residence_features.limit(4).each do |n| %>
+                    <li><%= n.name %></li>
+                    <hr>
+                  <% end %>
+                <% end %>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
+<% end %>
+
+<% if @development.galleries.count == 0 %>
+  <section class="development-no-gallery">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <h1>Gallery Coming Soon</h1>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </section>
+<% else %>
+  <!-- masterslider -->
+  <div class="master-slider ms-skin-default" id="masterslider">
+      <!-- new slide -->
+      <% @development.galleries.each do |n| %>
+        <% n.pictures.each do |p| %>
+          <div class="ms-slide">
+            <!-- slide background -->
+            <%= image_tag 'https://s3.amazonaws.com/miami-qosta/slider-images/blank.gif', data: {src: p.image.url(:retina)} %>
+            <!-- slide text layer -->
+            <div class="ms-layer ms-caption" style="top:10px; left:30px;">
+                <%= p.description %>
+            </div>
+          </div>
+      <% end %>
+    <% end %>
+      <!-- end of slide -->
+  </div>
+  <!-- end of masterslider -->
+<% end %>
+<% if @development.payment_schedule.blank? %>
+  <section class="development-payment">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <h1>PAYMENT SCHEDULE</h1>
+          <hr>
+          <ul>
+            <li>Payment Schedule coming soon</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+<% else %>
+  <section class="development-payment">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <h1>PAYMENT SCHEDULE</h1>
+          <hr>
+          <%= raw @development.payment_schedule %>
+        </div>
+      </div>
+    </div>
+  </section>
+<% end %>
+
+
+<% if @development.area_and_floorplan_image.blank? %>
+  <section class="development-no-gallery">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <h1>Floorplans Coming Soon</h1>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </section>
+<% else %>
+  <section class="development-area" style="background-image: url(<%= @development.area_and_floorplan_image %>)">
+    <div class="area-floorplan">
+      <ul>
+        <li>view area <%= link_to image_tag('arrow-right-white.svg'), @development.area_url, target: '_blank' %></li>
+        <% if @development.floorplan_pdf.blank? %>
+          <li>floorplans coming soon</li>
+        <% else %>
+          <li>see floorplans <%= link_to image_tag('arrow-right-white.svg'), @development.floorplan_pdf.url, target: '_blank' %></li>
+        <% end %>
+      </ul>
+    </div>
+  </section>
+<% end %>
+
+
+<section class="next-development">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <% if @development.next == nil %>
+          <h3>PREVIOUS PROJECT</h3>
+          <hr>
+          <div class="delimiter"></div>
+          <h1><%= @development.previous.name %></h1>
+          <%= link_to image_tag('arrow-right-gray.svg', style: 'transform: rotate(180deg);'), @development.previous %>
+        <% else %>
+          <h3>NEXT PROJECT</h3>
+          <hr>
+          <div class="delimiter"></div>
+          <h1><%= @development.next.name %></h1>
+          <%= link_to image_tag('arrow-right-gray.svg'), @development.next %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </section>
-<!-- masterslider -->
-<div class="master-slider ms-skin-default" id="masterslider">
-    <!-- new slide -->
-    <% @development.galleries.each do |n| %>
-      <% n.pictures.each do |p| %>
-        <div class="ms-slide">
-          <!-- slide background -->
-          <%= image_tag 'https://s3.amazonaws.com/miami-qosta/slider-images/blank.gif', data: {src: p.image.url(:retina)} %>
-          <!-- slide text layer -->
-          <div class="ms-layer ms-caption" style="top:10px; left:30px;">
-              <%= p.description %>
-          </div>
-        </div>
-    <% end %>
-  <% end %>
-    <!-- end of slide -->
-</div>
-<!-- end of masterslider -->
-  <% if @development.payment_schedule.blank? %>
-    <section class="development-payment">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-            <h1>PAYMENT SCHEDULE</h1>
-            <hr>
-            <ul>
-              <li>Payment Schedule coming soon</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-  <% else %>
-    <section class="development-payment">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-            <h1>PAYMENT SCHEDULE</h1>
-            <hr>
-            <%= raw @development.payment_schedule %>
-          </div>
-        </div>
-      </div>
-    </section>
-  <% end %>

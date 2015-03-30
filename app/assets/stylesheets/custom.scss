@@ -1417,3 +1417,40 @@ hr {
     font-size: 15px;
   }
 }
+
+.development-area {
+  @extend .development-services;
+  position: relative;
+  .area-floorplan {
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    bottom: 10em;
+    left: 10em;
+    li {
+      display: inline-block;
+      padding-right: 30px;
+      font-size: 16px;
+      img {
+        width: 45px;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+.development-no-gallery {
+  @extend .development-payment;
+  background: white;
+}
+
+.next-development {
+  padding: 10em 0;
+  text-align: center;
+  h1, h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #6d6e71;
+  }
+  img {
+    width: 45px;
+  }
+}
