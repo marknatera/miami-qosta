@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2014, Codrops
  * http://www.codrops.com
  */
@@ -12,7 +12,7 @@
 
 	var support = { animations : Modernizr.cssanimations },
 		container = document.getElementById( 'ip-container' ),
-		header = container.querySelector( 'header.ip-header' ),
+		section = container.querySelector( 'section.ip-header' ),
 		loader = new PathLoader( document.getElementById( 'ip-loader-circle' ) ),
 		animEndEventNames = { 'WebkitAnimation' : 'webkitAnimationEnd', 'OAnimation' : 'oAnimationEnd', 'msAnimation' : 'MSAnimationEnd', 'animation' : 'animationend' },
 		// animation end event name
@@ -58,7 +58,7 @@
 
 						var onEndHeaderAnimation = function(ev) {
 							if( support.animations ) {
-								if( ev.target !== header ) return;
+								if( ev.target !== section ) return;
 								this.removeEventListener( animEndEventName, onEndHeaderAnimation );
 							}
 
@@ -67,7 +67,7 @@
 						};
 
 						if( support.animations ) {
-							header.addEventListener( animEndEventName, onEndHeaderAnimation );
+							section.addEventListener( animEndEventName, onEndHeaderAnimation );
 						}
 						else {
 							onEndHeaderAnimation();
@@ -78,7 +78,7 @@
 
 		loader.setProgressFn( simulationFn );
 	}
-	
+
 	function noscroll() {
 		window.scrollTo( 0, 0 );
 	}

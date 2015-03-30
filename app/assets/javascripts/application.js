@@ -12,12 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-// = require turbolinks
+
 //= require bootstrap-sprockets
 //= require custom
 //= require masterslider
 //= require jquery.scrollTo-1.4.3.1-min
 //= require modernizr.custom
+//= require modernizr.custom-loader
 //= require page-transitions
 //= require easing.min
 //= require jquery.svg.js
@@ -32,12 +33,8 @@
 //= require snap.svg-min
 //= require svgicons-config
 //= require svgicons
-
 //= require classie-loader
-
-
 //= require pathLoader
-
 //= require main-loader
 
 $('#masterslider').masterslider({
