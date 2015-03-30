@@ -84,7 +84,7 @@
                   <li>Coming Soon</li>
                   <hr>
                 <% else %>
-                  <% @development.amenities.limit(7).each do |n| %>
+                  <% @development.amenities.limit(6).each do |n| %>
                     <li><%= n.name %></li>
                     <hr>
                   <% end %>
@@ -215,6 +215,7 @@
   </div>
   <!-- end of masterslider -->
 <% end %>
+
 <% if @development.payment_schedule.blank? %>
   <section class="development-payment">
     <div class="container-fluid">
