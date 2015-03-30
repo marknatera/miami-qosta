@@ -197,7 +197,7 @@
   </section>
 <% else %>
   <!-- masterslider -->
-  <div class="master-slider ms-skin-default" id="masterslider">
+  <section class="master-slider ms-skin-default" id="masterslider">
       <!-- new slide -->
       <% @development.galleries.each do |n| %>
         <% n.pictures.each do |p| %>
@@ -209,10 +209,10 @@
                 <%= p.description %>
             </div>
           </div>
+        <% end %>
       <% end %>
-    <% end %>
       <!-- end of slide -->
-  </div>
+  </section>
   <!-- end of masterslider -->
 <% end %>
 
