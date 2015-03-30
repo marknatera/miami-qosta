@@ -1307,6 +1307,9 @@ hr {
     text-transform: uppercase;
     font-size: 60px;
     padding-top: 4.5em;
+    @media (max-width: 767px) {
+      font-size: 30px;
+    }
   }
   .scroll-down {
     position: absolute;
@@ -1315,6 +1318,9 @@ hr {
     left: 0;
     right: 0;
     width: 50px;
+    @media (max-width: 767px) {
+      width: 40px;
+    }
   }
 }
 .development-content {
@@ -1331,6 +1337,9 @@ hr {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     padding-bottom: 1em;
+    @media (max-width: 767px) {
+      font-size: 30px;
+    }
   }
   li {
     line-height: 30px;
@@ -1341,14 +1350,28 @@ hr {
 }
 .development-amenities {
   @extend .project-home;
+  position: relative;
   color: $qgray;
   font-family: 'Lato', sans-serif;
   height: 100%;
+  .bkg-mobile {
+    display: none;
+    @media (max-width: 767px) {
+      display: block;
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
   .col-md-10 {
-    padding: 6em 0;
+    padding: 6em 15px;
   }
   h1 {
     padding: 0;
+    @media (max-width: 767px) {
+      font-size: 35px;
+    }
   }
   li {
     line-height: 30px;
@@ -1356,10 +1379,16 @@ hr {
     font-weight: 300;
     text-align: center;
     font-size: 15px;
+    @media (max-width: 767px) {
+      color: white;
+    }
   }
   hr {
     width: 100px;
-    border-top: black solid 1px;
+    border-top: $qgray solid 1px;
+    @media (max-width: 767px) {
+      border-top: white solid 1px;
+    }
   }
   ul {
     padding-top: 3em;
@@ -1426,10 +1455,20 @@ hr {
     position: absolute;
     bottom: 10em;
     left: 10em;
+    @media (max-width: 767px) {
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+    }
     li {
       display: inline-block;
       padding-right: 30px;
       font-size: 16px;
+      @media (max-width: 767px) {
+        display: block;
+        padding-right: 0px;
+        padding-top: 20px;
+      }
       img {
         width: 45px;
         padding-left: 10px;
