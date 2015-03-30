@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-
-//= require turbolinks
+// = require turbolinks
 //= require bootstrap-sprockets
 //= require custom
+//= require masterslider
 //= require jquery.scrollTo-1.4.3.1-min
 //= require modernizr.custom
 //= require page-transitions
@@ -32,12 +32,13 @@
 //= require snap.svg-min
 //= require svgicons-config
 //= require svgicons
-//= require classie-loader
-//= require main-loader
-//= require modernizr.custom-loader
-//= require pathLoader
-//= require masterslider
 
+//= require classie-loader
+
+
+//= require pathLoader
+
+//= require main-loader
 
 $('#masterslider').masterslider({
     width:1920,    // slider standard width
