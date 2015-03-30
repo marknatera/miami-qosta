@@ -27,16 +27,7 @@ $(function() {
   // // adds Arrows navigation control to the slider.
   // slider.control('arrows');
 
-  $('#masterslider').masterslider({
-      width:1920,    // slider standard width
-      height:1080,   // slider standard height
-      // more options...
-      controls : {
-          arrows : {autohide:false},
-          bullets : {}
-          // more slider controls...
-      }
-  });
+
 
 // Parallax
 // Home Page
