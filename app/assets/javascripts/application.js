@@ -15,6 +15,7 @@
 
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require custom
 //= require jquery.scrollTo-1.4.3.1-min
 //= require modernizr.custom
 //= require page-transitions
@@ -36,4 +37,3 @@
 //= require modernizr.custom-loader
 //= require pathLoader
 //= require masterslider
-//= require custom
