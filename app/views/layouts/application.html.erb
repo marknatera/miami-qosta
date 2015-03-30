@@ -52,10 +52,8 @@
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
+
   <script>
-
-
-
   $( "#showRightPush" ).click(function() {
     $( "#bkg-overlay" ).toggle();
   });
@@ -97,21 +95,21 @@
       new svgIcon( document.querySelector( '.si-icons-easing .si-icon-hamburger-cross' ), svgIconConfig, { easing : mina.elastic, speed: 600 } );
 
     })();
-
-
-    var slider = new MasterSlider();
-    slider.setup('masterslider' , {
-            width:1920,    // slider standard width
-            height:1080,   // slider standard height
-            space:5
-            // more slider options goes here...
-            // check slider options section in documentation for more options.
-        });
-    // adds Arrows navigation control to the slider.
-    slider.control('arrows');
-
   </script>
 
+
+    <script>
+        var slider = new MasterSlider();
+        slider.setup('masterslider' , {
+                width:1920,    // slider standard width
+                height:1080,   // slider standard height
+                space:5
+                // more slider options goes here...
+                // check slider options section in documentation for more options.
+            });
+        // adds Arrows navigation control to the slider.
+        slider.control('arrows');
+    </script>
 
 </body>
 </html>
