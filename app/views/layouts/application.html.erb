@@ -53,12 +53,7 @@
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
-  <script>
-
-  $( "#showRightPush" ).click(function() {
-    $( "#bkg-overlay" ).toggle();
-  });
-
+  <script charset="utf-8">
   $('#masterslider').masterslider({
       width:1920,    // slider standard width
       height:1080,   // slider standard height
@@ -68,6 +63,13 @@
           bullets : {}
           // more slider controls...
       }
+  });
+  </script>
+
+  <script>
+
+  $( "#showRightPush" ).click(function() {
+    $( "#bkg-overlay" ).toggle();
   });
 
     (function() {
