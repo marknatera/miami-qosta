@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-ui
+
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require custom
@@ -37,3 +37,4 @@
 //= require modernizr.custom-loader
 //= require pathLoader
 //= require masterslider
+//= require slider.js
