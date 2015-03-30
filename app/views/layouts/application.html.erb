@@ -59,6 +59,16 @@
     $( "#bkg-overlay" ).toggle();
   });
 
+  $('#masterslider').masterslider({
+      width:1920,    // slider standard width
+      height:1080,   // slider standard height
+      // more options...
+      controls : {
+          arrows : {autohide:false},
+          bullets : {}
+          // more slider controls...
+      }
+  });
 
     (function() {
       [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
