@@ -25,12 +25,14 @@
 //= require jquery.svganim
 //= require jquery.parallax.min
 //= require startup-kit
-//= require menu
+// menu
 //= require classie
 //= require selectFx
 //= require classie2
 //= require pageloader
 //= require tcon
+//= require ody-sidebar-menu
+//= require jquery.mCustomScrollbar.concat.min
 
 $('#masterslider').masterslider({
     width:1920,    // slider standard width

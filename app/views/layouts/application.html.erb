@@ -1,55 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <title>MiamiQosta</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-
   <%= csrf_meta_tags %>
+
 </head>
-<body class="cbp-spmenu-push">
+<body>
 
   <%= render 'layouts/preloader' %>
-
-  <button id="showRightPush" type="button" class="tcon tcon-menu--xbutterfly" aria-label="toggle menu">
-    <h3>Menu</h3>
-    <span class="tcon-menu__lines" aria-hidden="true"></span>
-  </button>
-
-  <!-- <a class="menu" id="showRightPush">MENU<%= image_tag "hamburger.svg" %></a> -->
-
-  <div>
-  <select class="cs-select cs-skin-elastic">
-    <option value="" disabled selected>Language</option>
-    <option value="spain" data-class="flag-spain">Español</option>
-    <option value="france" data-class="flag-france">français</option>
-    <option value="brazil" data-class="flag-brazil">Português</option>
-    <option value="russia" data-class="flag-russia">русский</option>
-  </select>
-</div>
-  <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-    <%= render 'layouts/navlinks' %>
-  </nav>
+  <%= render 'layouts/menu_button' %>
+  <%= render 'layouts/language' %>
 
 
-  <div class="page-wrapper">
     <div id="bkg-overlay"></div>
 
     <%= render 'layouts/header' %>
 
-    <%= yield %>
 
-  </div>
 
-  <footer class="footer-2 bg-black">
-    <%= render 'layouts/footer' %>
-  </footer>
+    <div class="ody-content">
+
+
+      <div class="ody-menu">
+
+
+          <!-- ODY MAIN MENU -->
+          <ul class="ody-main-menu">
+            <li><%= link_to 'HOME', root_path %></li>
+            <li><a href="#" id="dropdown">DEVELOPMENTS <i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><%= link_to 'OVERVIEW', developments_path %></li>
+                <li><%= link_to 'NEW DEVELOPMENTS', new_developments_path %></li>
+              </ul>
+            <li><%= link_to 'CONCIERGE', concierge_path %></li>
+            <li><%= link_to 'INVESTMENTS', investments_path %></li>
+            <li><%= link_to 'INTERGRAL SERVICE', integral_service_path %></li>
+            <li><%= link_to 'TEAM', team_path %></li>
+            <li><%= link_to 'CONTACT', contact_email_path %></li>
+            <!-- <li><a href="#" id="dropdown">Development <i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><%= link_to 'HOME', root_path %></li>
+
+                <li><%= link_to 'INVESTMENTS', investments_path %></li>
+                <li><%= link_to 'INTERGRAL SERVICE', integral_service_path %></li>
+                <li><%= link_to 'TEAM', team_path %></li>
+                <li><%= link_to 'CONTACT', contact_email_path %></li>
+              </ul>
+            </li> -->
+            <!-- <li><a href="#">Français</a></li>
+            <li><a href="#">Italiano</a></li>
+            <li><a href="#">Español</a></li>
+            <li><a href="#">Português</a></li>
+            <li style="border-top: #303030 solid .1em;"><a href="#" id="dropdown2">Languages: <i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><a href="#">Français</a></li>
+                <li><a href="#">Italiano</a></li>
+                <li><a href="#">Español</a></li>
+                <li><a href="#">Português</a></li>
+              </ul>
+            </li> -->
+          </ul>
+        </div> <!-- Mobile End -->
+
+
+
+
+
+      <%= yield %>
+
+      <footer class="footer-2 bg-black">
+        <%= render 'layouts/footer' %>
+      </footer>
+
+    </div>
+
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   <script>
 
-  $( "#showRightPush" ).click(function() {
+  $( "#ody-trigger" ).click(function() {
     $( "#bkg-overlay" ).toggle();
   });
 
