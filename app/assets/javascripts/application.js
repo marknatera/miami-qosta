@@ -30,9 +30,9 @@
 //= require selectFx
 //= require classie2
 //= require jquery.parallaxor
-//= require classie-loader
-//= require pathLoader
-//= require main-loader
+//classie-loader
+//pathLoader
+//main-loader
 
 $('#masterslider').masterslider({
     width:1920,    // slider standard width
