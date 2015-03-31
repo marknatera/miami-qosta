@@ -11,7 +11,12 @@
 
   <%= render 'layouts/preloader' %>
 
-  <a class="menu" id="showRightPush">MENU<%= image_tag "hamburger.svg" %></a>
+  <button id="showRightPush" type="button" class="tcon tcon-menu--xbutterfly" aria-label="toggle menu">
+    <h3>Menu</h3>
+    <span class="tcon-menu__lines" aria-hidden="true"></span>
+  </button>
+
+  <!-- <a class="menu" id="showRightPush">MENU<%= image_tag "hamburger.svg" %></a> -->
 
   <div>
   <select class="cs-select cs-skin-elastic">

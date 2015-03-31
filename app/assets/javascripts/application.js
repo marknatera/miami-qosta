@@ -30,6 +30,7 @@
 //= require selectFx
 //= require classie2
 //= require pageloader
+//= require tcon
 
 $('#masterslider').masterslider({
     width:1920,    // slider standard width
