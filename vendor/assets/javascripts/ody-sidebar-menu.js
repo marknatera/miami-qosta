@@ -46,6 +46,18 @@ $(function(){
 		$(this).next('ul').slideToggle(500);
 		$(this).toggleClass('active');
 	});
+	$('#dropdown3').click(function(dropdown) {
+		dropdown.preventDefault();
+
+		$(this).next('ul').slideToggle(500);
+		$(this).toggleClass('active');
+	});
+	$('#dropdown4').click(function(dropdown) {
+		dropdown.preventDefault();
+
+		$(this).next('ul').slideToggle(500);
+		$(this).toggleClass('active');
+	});
 
 	/* ENABLE SCROLL FOR MAIN MENU */
 	$(".ody-main-menu").mCustomScrollbar({

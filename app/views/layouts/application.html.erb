@@ -23,52 +23,7 @@
 
     <div class="ody-content">
 
-
-      <div class="ody-menu">
-
-
-          <!-- ODY MAIN MENU -->
-          <ul class="ody-main-menu">
-            <li><%= link_to 'HOME', root_path %></li>
-            <li><a href="#" id="dropdown">DEVELOPMENTS <i class="fa fa-caret-down"></i></a>
-              <ul>
-                <li><%= link_to 'OVERVIEW', developments_path %></li>
-                <li><%= link_to 'NEW DEVELOPMENTS', new_developments_path %></li>
-              </ul>
-            <li><%= link_to 'CONCIERGE', concierge_path %></li>
-            <li><%= link_to 'INVESTMENTS', investments_path %></li>
-            <li><%= link_to 'INTERGRAL SERVICE', integral_service_path %></li>
-            <li><%= link_to 'TEAM', team_path %></li>
-            <li><%= link_to 'CONTACT', contact_email_path %></li>
-            <!-- <li><a href="#" id="dropdown">Development <i class="fa fa-caret-down"></i></a>
-              <ul>
-                <li><%= link_to 'HOME', root_path %></li>
-
-                <li><%= link_to 'INVESTMENTS', investments_path %></li>
-                <li><%= link_to 'INTERGRAL SERVICE', integral_service_path %></li>
-                <li><%= link_to 'TEAM', team_path %></li>
-                <li><%= link_to 'CONTACT', contact_email_path %></li>
-              </ul>
-            </li> -->
-            <!-- <li><a href="#">Français</a></li>
-            <li><a href="#">Italiano</a></li>
-            <li><a href="#">Español</a></li>
-            <li><a href="#">Português</a></li>
-            <li style="border-top: #303030 solid .1em;"><a href="#" id="dropdown2">Languages: <i class="fa fa-caret-down"></i></a>
-              <ul>
-                <li><a href="#">Français</a></li>
-                <li><a href="#">Italiano</a></li>
-                <li><a href="#">Español</a></li>
-                <li><a href="#">Português</a></li>
-              </ul>
-            </li> -->
-          </ul>
-        </div> <!-- Mobile End -->
-
-
-
-
-
+      <%= render 'layouts/navlinks' %>
       <%= yield %>
 
       <footer class="footer-2 bg-black">
