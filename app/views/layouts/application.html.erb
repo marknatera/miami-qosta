@@ -8,7 +8,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="cbp-spmenu-push">
-  
+
+  <%= render 'layouts/preloader' %>
+
   <a class="menu" id="showRightPush">MENU<%= image_tag "hamburger.svg" %></a>
 
   <div>
@@ -78,6 +80,16 @@
         }
       });
     });
+
+    jQuery(window).resize(function(){
+       resizenow();
+    });
+    function resizenow() {
+      var browserwidth = jQuery(window).width();
+      var browserheight = jQuery(window).height();
+      jQuery('.bonfire-pageloader-icon').css('right', ((browserwidth - jQuery(".bonfire-pageloader-icon").width())/2)).css('top', ((browserheight - jQuery(".bonfire-pageloader-icon").height())/2));
+    };
+    resizenow();
 
   </script>
 
