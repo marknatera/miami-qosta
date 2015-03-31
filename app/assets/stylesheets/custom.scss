@@ -1511,6 +1511,9 @@ hr {
     font-weight: 300;
     text-align: center;
     text-transform: uppercase;
+    @media (max-width: 767px) {
+      font-size: 35px;
+    }
   }
   hr {
     border-top: #aad6f3 solid 2px;
