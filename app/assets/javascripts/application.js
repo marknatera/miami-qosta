@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-
 //= require bootstrap-sprockets
 //= require custom
 //= require masterslider
@@ -30,9 +29,6 @@
 //= require selectFx
 //= require classie2
 //= require jquery.parallaxor
-//= require snap.svg-min
-//= require svgicons-config
-//= require svgicons
 //= require classie-loader
 //= require pathLoader
 //= require main-loader
