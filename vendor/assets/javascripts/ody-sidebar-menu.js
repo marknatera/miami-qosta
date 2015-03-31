@@ -11,19 +11,19 @@ $(function(){
 		if(NavStart == 'false') {
 			$('.ody-menu').animate({
 				'right': '0px'
-			}, 500);
+			}, 400);
 			$('.ody-content').animate({
 				'right': '280px'
-			}, 500);
+			}, 400);
 
 			NavStart = 'true';
 		} else {
 			$('.ody-menu').animate({
 				'right': '-280px'
-			}, 500);
+			}, 400);
 			$('.ody-content').animate({
 				'right': '0px'
-			}, 500);
+			}, 400);
 
 			NavStart = 'false';
 		}
@@ -37,31 +37,31 @@ $(function(){
 	$('#dropdown').click(function(dropdown) {
 		dropdown.preventDefault();
 
-		$(this).next('ul').slideToggle(500);
+		$(this).next('ul').slideToggle(400);
 		$(this).toggleClass('active');
 	});
 	$('#dropdown2').click(function(dropdown) {
 		dropdown.preventDefault();
 
-		$(this).next('ul').slideToggle(500);
+		$(this).next('ul').slideToggle(400);
 		$(this).toggleClass('active');
 	});
 	$('#dropdown3').click(function(dropdown) {
 		dropdown.preventDefault();
 
-		$(this).next('ul').slideToggle(500);
+		$(this).next('ul').slideToggle(400);
 		$(this).toggleClass('active');
 	});
 	$('#dropdown4').click(function(dropdown) {
 		dropdown.preventDefault();
 
-		$(this).next('ul').slideToggle(500);
+		$(this).next('ul').slideToggle(400);
 		$(this).toggleClass('active');
 	});
 
 	/* ENABLE SCROLL FOR MAIN MENU */
 	$(".ody-main-menu").mCustomScrollbar({
-	      updateOnContentResize: true,
+	      updateOnContentResize: false,
 	      contentTouchScroll: true,
 	      autoExpandHorizontalScroll: true,
 	      mouseWheel:{ preventDefault: true},

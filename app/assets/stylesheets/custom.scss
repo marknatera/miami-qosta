@@ -1,7 +1,25 @@
+.logo-top {
+  position: fixed;
+  z-index: 100;
+  top: 15px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  @media (max-width: 991px) {
+    margin: 0;
+    left: 20px;
+  }
+}
+
 .v-align {
-  position: relative;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
 }
 
 hr {
@@ -382,6 +400,7 @@ hr {
 .top-section {
   background: #fafafa;
   height: 100vh;
+  position: relative;
   h1 {
     font-family: 'Lato', sans-serif;
     color: $qgray;
