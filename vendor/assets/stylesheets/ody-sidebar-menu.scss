@@ -226,11 +226,13 @@ ul.ody-main-menu li a i.fa {
 	text-align: center;
 	margin-right: 10px;
 	color: #3d3d3d;
-	// border-right: 1px solid rgba(0, 0, 0, 0.10);
+	// border-left: 1px solid rgba(0, 0, 0, 0.10);
+	right: 0;
+	position: absolute;
 }
 
 ul.ody-main-menu li a.dropdown i.dropdown-trigger {
-	display: none;
+	// display: none;
 }
 
 ul.ody-main-menu ul {

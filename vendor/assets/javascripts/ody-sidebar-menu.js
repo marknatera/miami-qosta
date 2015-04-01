@@ -30,7 +30,7 @@ $(function(){
 	});
 
 	/* DETECT IF LI HAS CHILDREN */
-	$('.ody-main-menu li').has('ul').children('a').append('<i class="fa fa-plus dropdown-trigger">');
+	$('.ody-main-menu li').has('ul').children('a').append('<i class="fa fa-angle-down dropdown-trigger">');
 	$('li').has('ul').children('a').addClass('dropdown');
 
 	/* ON LI WITH CHILDREN CLICK CHILDREN SHOW - HIDE */
