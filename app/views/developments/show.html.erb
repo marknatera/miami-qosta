@@ -319,13 +319,11 @@
         <% if @development.next == nil %>
           <h3>PREVIOUS PROJECT</h3>
           <hr>
-          <div class="delimiter"></div>
           <h1><%= @development.previous.name %></h1>
           <%= link_to image_tag('arrow-right-gray.svg', style: 'transform: rotate(180deg);'), @development.previous %>
         <% else %>
           <h3>NEXT PROJECT</h3>
           <hr>
-          <div class="delimiter"></div>
           <h1><%= @development.next.name %></h1>
           <%= link_to image_tag('arrow-right-gray.svg'), @development.next %>
         <% end %>
