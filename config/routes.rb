@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   get '/integral-service/financing' => 'pages#financing'
   get '/team' => 'pages#team'
   get '/contact' => 'contacts#new', as: 'contact_email'
-
+  get '/thanks' => 'pages#thanks'
 
 
 
