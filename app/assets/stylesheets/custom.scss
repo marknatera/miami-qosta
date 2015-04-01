@@ -1439,6 +1439,10 @@ hr {
     padding-top: 3em;
     padding-left: 0px;
   }
+  @media (max-width: 767px) {
+    height: 100vh;
+    padding: 10em 0;
+  }
 }
 .development-residence {
     @extend .development-amenities;
