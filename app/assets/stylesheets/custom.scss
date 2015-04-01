@@ -1590,6 +1590,54 @@ hr {
   }
 }
 
+.development-penthouse {
+  @extend .concierge-3;
+  position: relative;
+  color: $qgray;
+  font-family: 'Lato', sans-serif;
+  height: 100%;
+  .bkg-mobile {
+    display: none;
+    @media (max-width: 767px) {
+      display: block;
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .col-md-10 {
+    padding: 6em 15px;
+  }
+  h1 {
+    padding: 0;
+    @media (max-width: 767px) {
+      font-size: 35px;
+    }
+  }
+  li {
+    line-height: 30px;
+    list-style-type: none;
+    font-weight: 300;
+    text-align: center;
+    font-size: 15px;
+    @media (max-width: 767px) {
+      color: white;
+    }
+  }
+  hr {
+    width: 100px;
+    border: solid 1px #acd5f5;
+    @media (max-width: 767px) {
+      border-top: white solid 1px;
+    }
+  }
+  ul {
+    padding-top: 3em;
+    padding-left: 0px;
+  }
+}
+
 .thank-you {
   height: 100vh;
   position: relative;

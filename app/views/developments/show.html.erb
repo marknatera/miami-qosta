@@ -216,6 +216,44 @@
   <!-- end of masterslider -->
 <% end %>
 
+
+<% if @development.penthouse_image.blank? %>
+  <section class="development-no-gallery">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <h1>PENTHOUSE INFORMATION COMING SOON</h1>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </section>
+<% else %>
+  <section class="development-penthouse" style="background-image: url(<%= @development.penthouse_image %>)">
+    <div class="bkg-mobile"></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="row">
+            <div class="col-md-10">
+              <h1>PENTHOUSE</h1>
+              <hr>
+              <% if @development.penthouse.blank? %>
+                <ul>
+                  <li>Coming Soon</li>
+                </ul>
+              <% else %>
+                <%= raw @development.penthouse %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7"></div>
+      </div>
+    </div>
+  </section>
+<% end %>
+
 <% if @development.payment_schedule.blank? %>
   <section class="development-payment">
     <div class="container-fluid">
