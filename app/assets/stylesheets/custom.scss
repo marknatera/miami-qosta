@@ -1,3 +1,9 @@
+.more-info-arrow {
+  margin: 0 auto;
+  width: 50px;
+  display: block;
+  padding-top: 20px;
+}
 .logo-top {
   position: fixed;
   z-index: 100;
@@ -314,7 +320,7 @@ hr {
 }
 
 .project-home {
-  background-image:url(image-path("projects-home.jpg"));
+  background-image:url(http://miami-qosta-live.s3.amazonaws.com/developments/9/original/feature.jpg?1427742651);
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -509,7 +515,7 @@ hr {
 
 .concierge-1 {
   @extend .project-home;
-  background-image:url(image-path("concierge-1.jpg"));
+  background-image:url(image-path("concierge.jpg"));
   h1 {
     padding-top: 50%;
     text-align:center;
@@ -607,7 +613,7 @@ hr {
 .concierge-5 {
   @extend .concierge-1;
   @extend .project-home;
-  background-image:url(image-path("concierge-5.jpg"));
+  background-image:url(image-path("executive-car-1.jpg"));
   @media (min-width: 768px) and (max-width: 991px) {
     background-image:url(image-path("concierge-5-5.jpg"));
   }
@@ -618,13 +624,13 @@ hr {
 
 .concierge-6 {
   @extend .concierge-2;
-  background-image:url(image-path("concierge-6.jpg"));
+  background-image:url(image-path("executive-car.jpg"));
 }
 
 .concierge-7{
   @extend .concierge-3;
   @extend .project-home;
-  background-image:url(image-path("concierge-7.jpg"));
+  background-image:url(image-path("exotic2.jpg"));
   h1 {
     padding-top: 37vh;
   }
@@ -643,7 +649,7 @@ hr {
 }
 .concierge-8 {
   @extend .concierge-2;
-  background-image:url(image-path("concierge-8.jpg"));
+  background-image:url(image-path("exotic1.jpg"));
 }
 .concierge-9 {
   @extend .concierge-1;
@@ -742,6 +748,23 @@ hr {
   }
 }
 
+.sky-info2 {
+  @extend .sky-info;
+  background: #ffffff;
+  height: 100%;
+  padding: 100px 0;
+  ul {
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0px;
+  }
+  .delimiter {
+    margin-top: 50px;
+  }
+  h1 {
+    padding-top: 0;
+  }
+}
 // Ocean Concierge
 .ocean {
   @extend .sky;
