@@ -1681,6 +1681,14 @@ hr {
     padding-top: 3em;
     padding-left: 0px;
   }
+  .pent {
+    hr {
+      width: 50px;
+      border: none;
+      border-top: solid 1px black;
+      margin: 10px auto;
+    }
+  }
 }
 
 .thank-you {
