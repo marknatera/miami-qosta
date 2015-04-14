@@ -58,6 +58,7 @@ group :development, :test do
   gem 'spring'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  gem 'habtm_generator'
 end
 
 group :production do
