@@ -158,7 +158,7 @@
             <div class="col-md-10">
               <h1>RESIDENCES</h1>
               <ul>
-                <% if @development.building_services.count == 0 %>
+                <% if @development.residence_types.count == 0 %>
                   <li>Residence Styles Coming Soon</li>
                 <% else %>
                   <% @development.residence_types.limit(3).each do |n| %>
