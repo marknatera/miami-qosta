@@ -1,4 +1,5 @@
 class Development < ActiveRecord::Base
+  has_and_belongs_to_many :devs
   belongs_to :development_type
 
   has_many :galleries, :dependent => :destroy

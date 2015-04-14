@@ -5,7 +5,7 @@ ActiveAdmin.register Development do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :development_type_id, :name, :featured_image, :address, :description, :building_info, :amenities_image, :services_image, :residence_image, :penthouse_image, :area_and_floorplan_image, :floorplan_pdf, :penthouse, :payment_schedule, :area_url, amenities_attributes: [:id, :name, :_destroy], building_services_attributes: [:id, :name, :_destroy], residence_types_attributes: [:id, :name, :_destroy], residence_features_attributes: [:id, :name, :_destroy], galleries_attributes: [:id, :name, pictures_attributes: [:id, :name, :description, :image, :_destroy]]
+  permit_params :development_type_id, :name, :featured_image, :address, :description, :building_info, :amenities_image, :services_image, :residence_image, :penthouse_image, :area_and_floorplan_image, :floorplan_pdf, :penthouse, :payment_schedule, :area_url, {:dev_ids => []}, amenities_attributes: [:id, :name, :_destroy], building_services_attributes: [:id, :name, :_destroy], residence_types_attributes: [:id, :name, :_destroy], residence_features_attributes: [:id, :name, :_destroy], galleries_attributes: [:id, :name, pictures_attributes: [:id, :name, :description, :image, :_destroy]]
   #
   # or
   #
@@ -58,6 +58,7 @@ ActiveAdmin.register Development do
       f.input :area_and_floorplan_image
       f.input :area_url
       f.input :floorplan_pdf
+      f.input :dev_ids, as: :check_boxes, collection: Dev.all
     end
     f.actions
   end

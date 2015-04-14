@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150414193344) do
+ActiveRecord::Schema.define(version: 20150414202220) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -117,6 +117,13 @@ ActiveRecord::Schema.define(version: 20150414193344) do
     t.integer  "floorplan_pdf_file_size"
     t.datetime "floorplan_pdf_updated_at"
   end
+
+  create_table "developments_devs", id: false, force: :cascade do |t|
+    t.integer "dev_id"
+    t.integer "development_id"
+  end
+
+  add_index "developments_devs", ["dev_id", "development_id"], name: "developments_devs_index", unique: true
 
   create_table "devs", force: :cascade do |t|
     t.string   "name"

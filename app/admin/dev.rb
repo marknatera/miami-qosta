@@ -14,5 +14,11 @@ ActiveAdmin.register Dev do
   #   permitted
   # end
 
-
+  form do |f|
+    f.inputs "Development Details" do
+      f.input :name
+      f.input :developments, as: :check_boxes
+    end
+    f.actions
+  end
 end
