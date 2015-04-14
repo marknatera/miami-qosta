@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150326205313) do
+ActiveRecord::Schema.define(version: 20150414193344) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -116,6 +116,12 @@ ActiveRecord::Schema.define(version: 20150326205313) do
     t.string   "floorplan_pdf_content_type"
     t.integer  "floorplan_pdf_file_size"
     t.datetime "floorplan_pdf_updated_at"
+  end
+
+  create_table "devs", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "galleries", force: :cascade do |t|
