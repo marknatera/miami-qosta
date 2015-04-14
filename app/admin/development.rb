@@ -58,7 +58,7 @@ ActiveAdmin.register Development do
       f.input :area_and_floorplan_image
       f.input :area_url
       f.input :floorplan_pdf
-      f.input :dev_ids, as: :check_boxes, collection: Dev.all
+      f.input :dev_ids, as: :check_boxes, collection: Dev.all, :label=>'Developments'
     end
     f.actions
   end
