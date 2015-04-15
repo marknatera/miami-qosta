@@ -60,6 +60,8 @@ ActiveAdmin.register Development do
       f.input :area_url
       f.input :floorplan_pdf
       f.input :relation_development_1, as: :select, collection: Development.all, :label=>'Development 1'
+      f.input :relation_development_2, as: :select, collection: Development.all, :label=>'Development 2'
+      f.input :relation_development_3, as: :select, collection: Development.all, :label=>'Development 3'
     end
     f.actions
   end

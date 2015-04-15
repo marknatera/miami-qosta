@@ -321,10 +321,47 @@
           <%= link_to image_tag(@relation_1.featured_image.url(:retina), class: 'img-responsive'), @relation_1 %>
         <% end %>
       </div>
+      <div class="col-xs-12 col-sm-4 hover-dev" style="padding-left:0;padding-right:0;">
+        <div class="hover-development"></div>
+        <% unless @development.relation_development_2 == nil %>
+          <h3><%= link_to "#{@relation_2.name}", @relation_2 %></h3>
+          <%= link_to image_tag(@relation_2.featured_image.url(:retina), class: 'img-responsive'), @relation_3 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-4 hover-dev" style="padding-left:0;padding-right:0;">
+        <div class="hover-development"></div>
+        <% unless @development.relation_development_3 == nil %>
+          <h3><%= link_to "#{@relation_3.name}", @relation_3 %></h3>
+          <%= link_to image_tag(@relation_3.featured_image.url(:retina), class: 'img-responsive'), @relation_3 %>
+        <% end %>
+      </div>
+      </div>
     </div>
   </div>
 </section>
 
+<section class="all-devs">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <div class="row">
+          <div class="col-sm-12">
+            <h1>OTHER DEVELOPMENTS</h1>
+            <hr>
+          </div>
+        </div>
+        <div class="delimiter"></div>
+        <div class="row">
+          <% @devs.each do |d| %>
+            <div class="col-sm-2">
+              <h3><%= link_to "#{d.name}", d %></h3>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="next-development">
   <div class="container-fluid">
