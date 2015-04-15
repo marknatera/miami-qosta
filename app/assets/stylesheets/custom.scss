@@ -1444,7 +1444,7 @@ hr {
     }
   }
   hr {
-    width: 100px;
+    width: 50px;
     border-top: $qgray solid 1px;
     @media (max-width: 767px) {
       border-top: white solid 1px;
@@ -1483,6 +1483,9 @@ hr {
   ul {
     padding-top: 3em;
     padding-left: 0px;
+  }
+  hr {
+    width: 50px;
   }
 }
 .development-residence {
@@ -1639,6 +1642,9 @@ hr {
   padding: 3em 0 4em;
   h1 {
     text-transform: uppercase;
+    @media (max-width: 767px) {
+      font-size: 40px;
+    }
   }
 }
 
@@ -1709,6 +1715,9 @@ hr {
     color: #6d6e71;
     font-weight: 300;
     text-align: center;
+    @media (max-width: 767px) {
+      font-size: 40px;
+    }
   }
   h3 {
     font-family: 'Lato', sans-serif;
