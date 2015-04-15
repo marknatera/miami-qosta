@@ -1645,6 +1645,9 @@ hr {
     @media (max-width: 767px) {
       font-size: 40px;
     }
+    @media (max-width: 360px) {
+      font-size: 30px;
+    }
   }
 }
 
@@ -1717,6 +1720,9 @@ hr {
     text-align: center;
     @media (max-width: 767px) {
       font-size: 40px;
+    }
+    @media (max-width: 360px) {
+      font-size: 30px;
     }
   }
   h3 {
