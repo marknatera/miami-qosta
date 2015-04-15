@@ -406,7 +406,9 @@
         <div class="row">
           <% @devs.each do |d| %>
             <div class="col-sm-2">
-              <h3><%= link_to "#{d.name}", d %></h3>
+              <div class="listing-all">
+                <h3><%= link_to "#{d.name}", d %></h3>
+              </div>
             </div>
           <% end %>
         </div>
@@ -415,26 +417,26 @@
   </div>
 </section>
 
-<section class="next-development">
+<!-- <section class="next-development">
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-        <% if @development.next == nil %>
-          <% if @development.previous == nil %>
+        <%# if @development.next == nil %>
+          <%# if @development.previous == nil %>
           <div style="display:none;"></div>
-          <% else %>
+          <%# else %>
             <h3>PREVIOUS PROJECT</h3>
             <hr>
-            <h1><%= @development.previous.name %></h1>
-            <%= link_to image_tag('arrow-right-gray.svg', style: 'transform: rotate(180deg);'), @development.previous %>
-          <% end %>
-        <% else %>
+            <h1><%# @development.previous.name %></h1>
+            <%# link_to image_tag('arrow-right-gray.svg', style: 'transform: rotate(180deg);'), @development.previous %>
+          <%# end %>
+        <%# else %>
           <h3>NEXT PROJECT</h3>
           <hr>
-          <h1><%= @development.next.name %></h1>
-          <%= link_to image_tag('arrow-right-gray.svg'), @development.next %>
-        <% end %>
+          <h1><%# @development.next.name %></h1>
+          <%# link_to image_tag('arrow-right-gray.svg'), @development.next %>
+        <%# end %>
       </div>
     </div>
   </div>
-</section>
+</section>-->
