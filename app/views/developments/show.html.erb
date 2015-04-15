@@ -311,6 +311,19 @@
   </section>
 <% end %>
 
+<section class="development-list" id="decription">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 hover-dev" style="padding-left:0;padding-right:0;">
+        <div class="hover-development"></div>
+        <% unless @development.relation_development_1 == nil %>
+          <h3><%= link_to "#{@relation_1.name}", @relation_1 %></h3>
+          <%= link_to image_tag(@relation_1.featured_image.url(:retina), class: 'img-responsive'), @relation_1 %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <section class="next-development">

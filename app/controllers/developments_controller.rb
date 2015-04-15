@@ -16,6 +16,15 @@ class DevelopmentsController < ApplicationController
 
 
   def show
+    unless @development.relation_development_1 == nil
+      @relation_1 = Development.find(@development.relation_development_1)
+    end
+    unless @development.relation_development_2 == nil
+      @relation_2 = Development.find(@development.relation_development_2)
+    end
+    unless @development.relation_development_3 == nil
+      @relation_3 = Development.find(@development.relation_development_3)
+    end
   end
 
 
