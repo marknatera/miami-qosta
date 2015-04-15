@@ -312,15 +312,20 @@
 <% end %>
 
 
+
 <section class="next-development">
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 col-sm-10 col-sm-offset-1">
         <% if @development.next == nil %>
-          <h3>PREVIOUS PROJECT</h3>
-          <hr>
-          <h1><%= @development.previous.name %></h1>
-          <%= link_to image_tag('arrow-right-gray.svg', style: 'transform: rotate(180deg);'), @development.previous %>
+          <% if @development.previous == nil %>
+          <div style="display:none;"></div>
+          <% else %>
+            <h3>PREVIOUS PROJECT</h3>
+            <hr>
+            <h1><%= @development.previous.name %></h1>
+            <%= link_to image_tag('arrow-right-gray.svg', style: 'transform: rotate(180deg);'), @development.previous %>
+          <% end %>
         <% else %>
           <h3>NEXT PROJECT</h3>
           <hr>
