@@ -84,7 +84,7 @@
                   <li>Coming Soon</li>
                   <hr>
                 <% else %>
-                  <% @development.amenities.limit(6).each do |n| %>
+                  <% @development.amenities.limit(5).each do |n| %>
                     <li><%= n.name %></li>
                     <hr>
                   <% end %>
@@ -148,7 +148,7 @@
               <li>Coming Soon</li>
               <hr>
             <% else %>
-              <% @development.building_services.limit(6).each do |n| %>
+              <% @development.building_services.limit(5).each do |n| %>
                 <li><%= n.name %></li>
                 <hr>
               <% end %>
