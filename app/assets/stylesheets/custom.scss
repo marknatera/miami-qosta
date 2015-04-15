@@ -1634,6 +1634,14 @@ hr {
     }
   }
 }
+.development-similar {
+  @extend .development-payment;
+  padding: 3em 0 4em;
+  h1 {
+    text-transform: uppercase;
+  }
+}
+
 
 .development-penthouse {
   @extend .concierge-3;
