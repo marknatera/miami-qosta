@@ -90,6 +90,33 @@
                   <% end %>
                 <% end %>
               </ul>
+                <% if @development.amenities.count > 10000000 %>
+                  <br>
+                  <a type="button" class="show-more-button" data-toggle="modal" data-target="#amenities">Show More &nbsp;<%= image_tag 'arrow-right-gray.svg', style: 'width:30px;' %></a>
+                  <div class="modal fade bs-example-modal-lg" id="amenities" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times fa-2x"></i></span></button>
+                        <div class="container">
+                          <div class="row top">
+                            <div class="col-sm-12">
+                              <h1 style="margin-bottom: 0px;">Building Ameneties</h1>
+                            </div>
+                          </div>
+                          <div class="row show-more">
+                            <div class="col-sm-12">
+                              <div class="col-sm-6 col-sm-offset-3">
+                                <% @development.amenities.each do |d| %>
+                                  <p><%= d.name %></p>
+                                <% end %>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
             </div>
           </div>
         </div>
@@ -113,10 +140,10 @@
 <% else %>
   <section class="development-services" style="background-image: url(<%= @development.services_image %>)">
     <div class="container-fluid">
-       <div class="row">
-         <div class="col-xs-12 col-sm-5 col-sm-offset-1">
-           <h1>Building Services</h1>
-           <ul>
+      <div class="row">
+        <div class="col-xs-12 col-sm-5 col-sm-offset-1">
+          <h1>Building Services</h1>
+          <ul>
             <% if @development.building_services.count == 0 %>
               <li>Coming Soon</li>
               <hr>
@@ -125,11 +152,36 @@
                 <li><%= n.name %></li>
                 <hr>
               <% end %>
-
             <% end %>
-           </ul>
-         </div>
-       </div>
+          </ul>
+          <% if @development.building_services.count > 100000 %>
+          <a type="button" class="show-more-button" data-toggle="modal" data-target="#building_services">Show More &nbsp;<%= image_tag 'arrow-right-gray.svg', style: 'width:30px;' %></a>
+          <div class="modal fade bs-example-modal-lg" id="building_services" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times fa-2x"></i></span></button>
+                <div class="container">
+                  <div class="row top">
+                    <div class="col-sm-12">
+                      <h1 style="margin-bottom: 0px;">Building Services</h1>
+                    </div>
+                  </div>
+                  <div class="row show-more">
+                    <div class="col-sm-12">
+                      <div class="col-sm-6 col-sm-offset-3">
+                        <% @development.building_services.each do |d| %>
+                          <p><%= d.name %></p>
+                        <% end %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
     </div>
   </section>
 <% end %>
