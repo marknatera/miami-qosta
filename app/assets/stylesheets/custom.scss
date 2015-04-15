@@ -1015,12 +1015,12 @@ hr {
 
 .invest-2 {
   @extend .concierge-2;
-  background-image:url(image-path("invest-2.jpg"));
+  background-image:url("http://miami-qosta-live.s3.amazonaws.com/pictures/85/retina/gallery1.jpg?1427810643");
 }
 
 .invest-3 {
   @extend .concierge-3;
-  background-image:url(image-path("invest-3.jpg"));
+  background-image:url("http://miami-qosta-live.s3.amazonaws.com/developments/16/original/residences.jpg?1427745698");
   @media (min-width: 768px) and (max-width: 991px) {
     background-image:url(image-path("invest-3-3.jpg"));
   }
@@ -1040,26 +1040,18 @@ hr {
 }
 .house-info {
   @extend .sky-info;
-  background-image:url(image-path("http://miami-qosta-live.s3.amazonaws.com/pictures/87/retina/gallery3.jpg?1427810647"));
-  position: relative;
+  background: white;
   height: 100%;
   padding: 100px 0;
-  .bkg {
-    background: rgba(0,0,0,0.5);
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-  }
+
   ul {
     padding-left: 40px;
-    color:white;
+    color:$qgray;
     font-weight: 300;
     font-family: $lato;
   }
   p {
-    color: white;
+    color:$qgray;
     text-align: left;
   }
   @media (min-width: 768px) and (max-width: 991px) {
@@ -1308,6 +1300,20 @@ hr {
 .finance-info{
   @extend .sky-info;
   background-image:url(image-path("finance-1.jpg"));
+  height:40vh;
+}
+.finance-info2 {
+  @extend .finance-info;
+  background: white;
+  padding: 100px 0;
+  height: 100%;
+  p {
+    text-align: left;
+  }
+  ul {
+    font-weight: 300;
+    color: $qgray;
+  }
 }
 
 
