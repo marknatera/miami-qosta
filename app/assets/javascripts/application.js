@@ -12,20 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
-
 //= require bootstrap-sprockets
 //= require custom
 //= require masterslider
 //= require jquery.scrollTo-1.4.3.1-min
 //= require modernizr.custom
-//modernizr.custom-loader
 //= require page-transitions
 //= require easing.min
 //= require jquery.svg.js
 //= require jquery.svganim
 //= require jquery.parallax.min
 //= require startup-kit
-// menu
 //= require classie
 //= require selectFx
 //= require classie2
@@ -33,6 +30,7 @@
 //= require tcon
 //= require ody-sidebar-menu
 //= require jquery.mCustomScrollbar.concat.min
+
 
 $('#masterslider').masterslider({
     width:1920,    // slider standard width

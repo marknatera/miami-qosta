@@ -30,7 +30,7 @@ CONTENTS:
 
 .mCustomScrollBox{ /* contains plugin's markup */
 	position: relative;
-	overflow: hidden;
+	// overflow: hidden;
 	height: 100%;
 	max-width: 100%;
 	outline: none;
@@ -38,7 +38,7 @@ CONTENTS:
 }
 
 .mCSB_container{ /* contains the original content */
-	overflow: hidden;
+	// overflow: hidden;
 	width: auto;
 	height: auto;
 }

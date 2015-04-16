@@ -1,3 +1,6 @@
+.stay-still {
+  overflow: hidden;
+}
 .more-info-arrow {
   margin: 0 auto;
   width: 50px;
@@ -88,9 +91,10 @@ hr {
   width:100%;
   height:100%;
   background: rgba(0, 0, 0, 0.6);
-  position: fixed;
   z-index: 4;
   display: none;
+  position: absolute;
+  overflow: hidden;
 }
 
 // Nav Bar
