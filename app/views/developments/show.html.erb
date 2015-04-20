@@ -292,9 +292,7 @@
             <div class="col-md-10">
               <h1>PENTHOUSE</h1>
               <% if @development.penthouse.blank? %>
-                <ul>
-                  <li>Coming Soon</li>
-                </ul>
+                <p style="padding-top: 2em;"><strong>Coming Soon</strong></p>
               <% else %>
                 <%= raw @development.penthouse %>
               <% end %>
