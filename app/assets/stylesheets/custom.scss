@@ -1436,6 +1436,11 @@ hr {
     border-left: none;
     border-radius: 0px;
     border-bottom: $qgray solid 1px;
+    // transition: all .2s;
+    box-shadow: none;
+    -webkit-transition: none;
+    -webkit-box-shadow: none;
+    -o-transition: none;
   }
   .form-control:focus {
     box-shadow: 0 4px 2px -2px $gray;
