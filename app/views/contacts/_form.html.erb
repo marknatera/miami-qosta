@@ -1,12 +1,12 @@
 <%= form_for(@contact) do |f| %>
   <div class="row">
-    <div class="col-md-4 col-md-offset-1">
+    <div class="col-sm-5 col-sm-offset-1">
         <%= f.text_field :first, class: 'form-control', placeholder: 'First Name' %>
         <br>
         <%= f.text_field :last, class: 'form-control', placeholder: "Last Name" %>
         <br>
     </div>
-    <div class="col-md-4 col-md-offset-2">
+    <div class="col-sm-5">
       <%= f.text_field :email, class: 'form-control', placeholder: "Email" %>
       <br>
       <%= f.text_field :cellphone, class: 'form-control', placeholder: "Cell Phone" %>
@@ -14,7 +14,7 @@
   </div>
   <div class="delimiter"></div>
   <div class="row">
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col-sm-10 col-sm-offset-1">
       <p>What Are You Interested In?</p>
         <%= f.select :interest, nil, {prompt: 'Select One'}, {class: 'form-control'} do %>
           <% [['Investments'], ['Concierge'], ['New Developments'], ['Existing Developments'], ['Residence']].each do |i| %>
@@ -25,7 +25,7 @@
   </div>
   <div class="delimiter"></div>
   <div class="row">
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col-sm-10 col-md-offset-1">
       <%= f.text_area :message, class: 'form-control', :rows => "1", style: 'padding-bottom: 5px;', placeholder: "Message" %>
     </div>
   </div>
@@ -33,14 +33,3 @@
     <%= f.submit "SEND", class: 'btn btn-contact' %>
 
 <% end %>
-<!-- <% if @contact.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
-
-    <ul>
-    <% @contact.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %> -->
