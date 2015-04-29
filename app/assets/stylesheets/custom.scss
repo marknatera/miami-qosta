@@ -191,6 +191,13 @@ hr {
   @extend .header-15-sub;
   height: 100vh;
   position: relative;
+  .blk-bkg {
+    position: absolute;
+    width:100%;
+    height:100%;
+    display:block;
+    background:rgba(0,0,0,.3);
+  }
   .title {
     padding-top: 20em;
     @media (max-width: 1440px) {
@@ -199,13 +206,15 @@ hr {
 
   }
   .background {
-    background-image:url(image-path("home-main.jpg"));
+    // background-image:url(image-path("home-main.jpg"));
+    background-image:url(http://miami-qosta-live.s3.amazonaws.com/pictures/11/retina/gallery2.jpg?1427736617);
     opacity: 1;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
     @media (min-width: 768px) and (max-width: 991px) {
       height: 100vh;
       background-image:url(image-path("home-main1.jpg"));
@@ -335,7 +344,7 @@ hr {
 }
 
 .project-home {
-  background-image:url(http://miami-qosta-live.s3.amazonaws.com/developments/9/original/feature.jpg?1427742651);
+  background-image:url(https://s3-us-west-2.amazonaws.com/miami-qosta-live/static-pages-pictures/home-projects2.jpg);
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -530,7 +539,7 @@ hr {
 
 .concierge-1 {
   @extend .project-home;
-  background-image:url(image-path("concierge.jpg"));
+  background-image:url(https://s3-us-west-2.amazonaws.com/miami-qosta-live/static-pages-pictures/concierge-sky.jpg);
   h1 {
     padding-top: 50%;
     text-align:center;
@@ -592,7 +601,7 @@ hr {
 .concierge-3{
   @extend .concierge-1;
   @extend .project-home;
-  background-image:url(image-path("concierge-3.jpg"));
+  background-image:url(https://s3-us-west-2.amazonaws.com/miami-qosta-live/static-pages-pictures/concierge-ocean.jpg);
   .col-md-5 {
     padding-left: 100px;
   }
@@ -622,7 +631,7 @@ hr {
 
 .concierge-4 {
   @extend .concierge-2;
-  background-image:url(image-path("concierge-4.jpg"));
+  background-image:url(https://s3-us-west-2.amazonaws.com/miami-qosta-live/static-pages-pictures/concierge-ocean2.jpg);
 }
 
 .concierge-5 {
@@ -630,7 +639,7 @@ hr {
   .bkg {display:none;}
   @extend .concierge-1;
   @extend .project-home;
-  background-image:url(image-path("executive-car-1.jpg"));
+  background-image:url(https://s3-us-west-2.amazonaws.com/miami-qosta-live/static-pages-pictures/concierge-executive.jpg);
   @media (min-width: 768px) and (max-width: 991px) {
     background-image:url(image-path("executive-car.jpg"));
     .bkg {
@@ -655,7 +664,7 @@ hr {
 
 .concierge-6 {
   @extend .concierge-2;
-  background-image:url(image-path("executive-car.jpg"));
+  background-image:url(https://s3-us-west-2.amazonaws.com/miami-qosta-live/static-pages-pictures/concierge-executive2.jpg)
 }
 
 .concierge-7{
@@ -663,7 +672,7 @@ hr {
   .bkg {display:none;}
   @extend .concierge-3;
   @extend .project-home;
-  background-image:url(image-path("exotic2.jpg"));
+  background-image:url(https://s3-us-west-2.amazonaws.com/miami-qosta-live/static-pages-pictures/concierge-exotic.jpg);
   h1 {
     padding-top: 37vh;
   }
@@ -696,12 +705,12 @@ hr {
 }
 .concierge-8 {
   @extend .concierge-2;
-  background-image:url(image-path("exotic1.jpg"));
+  background-image:url(https://s3-us-west-2.amazonaws.com/miami-qosta-live/static-pages-pictures/concierge-exotic2.jpg);
 }
 .concierge-9 {
   @extend .concierge-1;
   @extend .project-home;
-  background-image:url(image-path("concierge-9.jpg"));
+  background-image:url(https://s3-us-west-2.amazonaws.com/miami-qosta-live/static-pages-pictures/concierge-time.jpg);
   h1 {
     padding-top: 40vh;
   }
@@ -1121,7 +1130,7 @@ hr {
   h1 {
     padding-top: 30%;
   }
-  background-image:url(image-path("integral-6.jpg"));
+  background-image:url(https://s3-us-west-2.amazonaws.com/miami-qosta-live/static-pages-pictures/luxury-living.jpg);
   @media (min-width: 768px) and (max-width: 991px) {
     background-image:url(image-path("integral-6-6.jpg"));
   }
