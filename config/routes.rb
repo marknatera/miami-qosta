@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get '/team' => 'pages#team'
   get '/contact' => 'contacts#new', as: 'contact_email'
   get '/thanks' => 'pages#thanks'
+  get '/sitemap.xml', to: redirect('https://s3-us-west-2.amazonaws.com/miami-qosta-live/sitemap.xml')
 
 
 
