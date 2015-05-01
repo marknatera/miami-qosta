@@ -1,8 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-
-  <title>MiamiQosta</title>
+  <title><%= yield(:title) || 'Miami Real Estate' %> | MiamiQosta</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
