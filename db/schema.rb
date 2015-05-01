@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150415024947) do
+ActiveRecord::Schema.define(version: 20150501205656) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -119,7 +119,10 @@ ActiveRecord::Schema.define(version: 20150415024947) do
     t.integer  "relation_development_1"
     t.integer  "relation_development_2"
     t.integer  "relation_development_3"
+    t.string   "slug"
   end
+
+  add_index "developments", ["slug"], name: "index_developments_on_slug"
 
   create_table "galleries", force: :cascade do |t|
     t.string   "name"
