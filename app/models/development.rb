@@ -156,4 +156,20 @@ class Development < ActiveRecord::Base
     Development.where(["id < ?", id]).last
   end
 
+  def to_param
+    "#{id}-#{name}".parameterize
+  end
+
+  # def to_key
+  #   key = respond_to?(:name) && id
+  #   key ? [key] : nil
+  # end
+  #
+  # def to_param
+  #   (persisted? && key = to_key) ? key.join('-') : nil
+  #     "#{id}-#{name}".parameterize
+  # end
+
+
+
 end
