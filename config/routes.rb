@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   resources :contacts
 
-  resources :developments
+  resources :developments, path: '/new-developments', only: [:show]
 
   get '/new-developments' => 'developments#new_developments_index'
 

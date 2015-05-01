@@ -1,4 +1,8 @@
 class Development < ActiveRecord::Base
+  validates :slug, uniqueness: true, presence: true
+
+  before_validation :generate_slug
+
   belongs_to :development_type
 
   has_many :galleries, :dependent => :destroy
@@ -157,7 +161,11 @@ class Development < ActiveRecord::Base
   end
 
   def to_param
-    "#{id}-#{name}".parameterize
+    slug
+  end
+
+  def generate_slug
+    self.slug ||= name.parameterize
   end
 
   # def to_key

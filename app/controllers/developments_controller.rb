@@ -1,4 +1,7 @@
 class DevelopmentsController < ApplicationController
+
+  before_filter :find_dev, only: [:show]
+
   before_action :set_development, only: [:show]
 
 
@@ -29,15 +32,19 @@ class DevelopmentsController < ApplicationController
   end
 
 
-  private
+private
 
   def set_development
-    @development = Development.find(params[:id])
+    # @development = Development.find_by_slug!(params[:id])
     @development.amenities.build
     @development.building_services.build
     @development.residence_types.build
     @development.residence_features.build
     @development.galleries.build
+  end
+
+  def find_dev
+    @development = Development.find_by_slug!(params[:id])
   end
 
 end
