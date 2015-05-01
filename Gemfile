@@ -40,6 +40,7 @@ gem 'awesome_print', '~> 1.6.1'
 gem 'paperclip', '~> 4.2.1'
 gem 'aws-sdk', '< 2.0'
 gem "figaro"
+gem 'permalink_fu', '~> 1.0.0'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
