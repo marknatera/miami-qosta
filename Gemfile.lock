@@ -192,7 +192,6 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
-    permalink_fu (1.0.0)
     pg (0.18.1)
     polyamorous (1.1.0)
       activerecord (>= 3.0)
@@ -299,7 +298,6 @@ DEPENDENCIES
   jquery-rails
   newrelic_rpm
   paperclip (~> 4.2.1)
-  permalink_fu (~> 1.0.0)
   pg
   rails (= 4.2.0)
   rails_12factor
