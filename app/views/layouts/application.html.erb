@@ -1,9 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title><%= yield(:title) || 'Miami Real Estate' %> | MiamiQosta</title>
+  <title><%= yield(:title).blank? ? 'Miami Real Estate' : yield(:title) %> | MiamiQosta</title>
+  <meta name="description" content="<%= yield(:meta_description) %>">
+  <meta name="keyword" content="<%= yield(:keyword).blank? ? 'MiamiQosta' : yield(:keyword) %>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="msvalidate.01" content="FC011CE0105FCDEF96CA6CF4983F14D2" />
 

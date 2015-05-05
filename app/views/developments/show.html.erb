@@ -1,4 +1,6 @@
 <% title @development.name %>
+<% meta_description @development.meta_description %>
+<% keyword @development.name %>
 
 <% if @development.featured_image.blank? %>
 <section class="development-featured">
@@ -258,7 +260,7 @@
           <% n.pictures.each do |p| %>
             <div class="ms-slide">
               <!-- slide background -->
-              <%= image_tag 'https://s3.amazonaws.com/miami-qosta/slider-images/blank.gif', data: {src: p.image.url(:retina)} %>
+              <%= image_tag 'https://s3.amazonaws.com/miami-qosta/slider-images/blank.gif', data: {src: p.image.url(:retina)}, alt: @development.name %>
               <!-- slide text layer -->
               <div class="ms-layer ms-caption" style="top:10px; left:30px;">
                   <%= p.description %>
@@ -380,21 +382,21 @@
         <div class="hover-development"></div>
         <% unless @development.relation_development_1 == nil %>
           <h3><%= link_to "#{@relation_1.name}", @relation_1 %></h3>
-          <%= link_to image_tag(@relation_1.featured_image.url(:retina), class: 'img-responsive'), @relation_1 %>
+          <%= link_to image_tag(@relation_1.featured_image.url(:retina), class: 'img-responsive', alt: @development.name), @relation_1 %>
         <% end %>
       </div>
       <div class="col-xs-12 col-sm-4 hover-dev" style="padding-left:0;padding-right:0;">
         <div class="hover-development"></div>
         <% unless @development.relation_development_2 == nil %>
           <h3><%= link_to "#{@relation_2.name}", @relation_2 %></h3>
-          <%= link_to image_tag(@relation_2.featured_image.url(:retina), class: 'img-responsive'), @relation_3 %>
+          <%= link_to image_tag(@relation_2.featured_image.url(:retina), class: 'img-responsive', alt: @development.name), @relation_3 %>
         <% end %>
       </div>
       <div class="col-xs-12 col-sm-4 hover-dev" style="padding-left:0;padding-right:0;">
         <div class="hover-development"></div>
         <% unless @development.relation_development_3 == nil %>
           <h3><%= link_to "#{@relation_3.name}", @relation_3 %></h3>
-          <%= link_to image_tag(@relation_3.featured_image.url(:retina), class: 'img-responsive'), @relation_3 %>
+          <%= link_to image_tag(@relation_3.featured_image.url(:retina), class: 'img-responsive', alt: @development.name), @relation_3 %>
         <% end %>
       </div>
     </div>
