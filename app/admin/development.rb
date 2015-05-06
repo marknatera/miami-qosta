@@ -9,7 +9,7 @@ ActiveAdmin.register Development do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :development_type_id, :name, :featured_image, :address, :description, :building_info, :amenities_image, :services_image, :residence_image, :penthouse_image, :area_and_floorplan_image, :floorplan_pdf, :penthouse, :payment_schedule, :area_url, :relation_development_1, :relation_development_2, :relation_development_3, :meta_description,
+  permit_params :development_type_id, :name, :featured_image, :address, :description, :building_info, :amenities_image, :services_image, :residence_image, :penthouse_image, :area_and_floorplan_image, :floorplan_pdf, :penthouse, :payment_schedule, :area_url, :relation_development_1, :relation_development_2, :relation_development_3, :meta_description, :no_penthouse,
   amenities_attributes: [:id, :name, :_destroy], building_services_attributes: [:id, :name, :_destroy], residence_types_attributes: [:id, :name, :_destroy], residence_features_attributes: [:id, :name, :_destroy], galleries_attributes: [:id, :name, pictures_attributes: [:id, :name, :description, :image, :_destroy]]
   #
   # or
@@ -58,6 +58,7 @@ ActiveAdmin.register Development do
           pic.input :_destroy, :as=>:boolean, :label=>'Remove'
         end
       end
+      f.input :no_penthouse, label: "Please check this box if you do not want a Penthouse section."
       f.input :penthouse_image, :hint => f.image_tag(f.object.penthouse_image.url(:admin))
       f.input :penthouse, as: :ckeditor
       f.input :payment_schedule, as: :ckeditor
