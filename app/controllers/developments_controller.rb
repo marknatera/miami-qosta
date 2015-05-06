@@ -35,12 +35,11 @@ class DevelopmentsController < ApplicationController
 private
 
   def set_development
-    # @development = Development.find_by_slug!(params[:id])
-    @development.amenities.build
-    @development.building_services.build
-    @development.residence_types.build
-    @development.residence_features.build
-    @development.galleries.build
+    0.times {@development.amenities.build}
+    0.times {@development.building_services.build}
+    0.times {@development.residence_types.build}
+    0.times {@development.residence_features.build}
+    0.times {@development.galleries.build}
   end
 
   def find_dev

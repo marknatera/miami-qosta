@@ -2,6 +2,108 @@
 <% meta_description @development.meta_description %>
 <% keyword @development.name %>
 
+<div class="more-info" style="z-index:200">
+  <button type="button" class="btn btn-dev" data-toggle="modal" data-target=".bs-example-modal-lg">More Info</button>
+  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times fa-2x"></i></span></button>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h1><%= @development.name %></h1>
+              <h2><%= @development.address %></h2>
+              <hr>
+            </div>
+          </div>
+          <div class="delimiter"></div>
+          <div class="row">
+            <div class="col-sm-6">
+              <% if @development.description.blank? %>
+                <p>Building description coming soon.</p>
+              <% else %>
+                <%= raw @development.description %>
+              <% end %>
+            </div>
+            <div class="col-sm-6">
+              <% if @development.building_info.blank? %>
+                <p>Building info coming soon.</p>
+              <% else %>
+                <%= raw @development.building_info %>
+              <% end %>
+            </div>
+          </div>
+          <div class="delimiter"></div>
+          <div class="row">
+            <div class="col-sm-12">
+              <% unless @development.amenities.blank? %>
+                <p>Amenities:</p>
+                <ul>
+                  <% @development.amenities.each do |dev| %>
+                    <li><%= dev.name %></li>
+                  <% end %>
+                </ul>
+                <br>
+              <% end %>
+              <% unless @development.building_services.blank? %>
+                <p>Bulding Services:</p>
+                <ul>
+                  <% @development.building_services.each do |dev| %>
+                    <li><%= dev.name %></li>
+                  <% end %>
+                </ul>
+                <br>
+              <% end %>
+              <% unless @development.residence_types.blank? %>
+                <p>Residence Types:</p>
+                <ul>
+                  <% @development.residence_types.each do |dev| %>
+                    <li><%= dev.name %></li>
+                  <% end %>
+                </ul>
+                <br>
+              <% end %>
+              <% unless @development.residence_features.blank? %>
+                <p>Residence Features</p>
+                <ul>
+                  <% @development.residence_features.each do |dev| %>
+                    <li><%= dev.name %></li>
+                  <% end %>
+                </ul>
+              <% end %>
+            </div>
+          </div>
+          <div class="delimiter"></div>
+          <div class="row">
+            <div class="col-sm-12">
+              <% unless @development.penthouse.blank? %>
+                <p>Penthouse</p>
+                <%= raw @development.penthouse %>
+                <br>
+              <% end %>
+              <% unless @development.payment_schedule.blank? %>
+                <p>Payment Schedule</p>
+                <%= raw @development.payment_schedule %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(function() {
+      $('.more-info').css({
+          'position' : 'fixed',
+          'left' : '50%',
+          'top' : '50%',
+          'margin-left' : -$('.more-info').outerWidth()/2,
+          'margin-top' : -$('.more-info').outerHeight()/2
+      });
+  });
+</script>
+
 <% if @development.featured_image.blank? %>
 <section class="development-featured">
   <div class="container-fluid">

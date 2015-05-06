@@ -1501,6 +1501,35 @@ hr {
 
 // Development Page
 
+.more-info {
+  left: 0!important;
+  margin-left: -31px !important;
+  font-family: $lato;
+  h1 {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .btn {
+    transform: rotate(90deg);
+    outline: none;
+    outline-offset: none;
+  }
+  .btn-dev {
+    @extend .btn-primary;
+    color: $qgray;
+    background-color: white;
+    border: none;
+    border-radius: 0px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 300;
+    &:hover, &:active, &:visited, &:focus {
+      background-color: #acd5f5;
+    }
+  }
+}
+
 .development-featured {
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -1925,13 +1954,21 @@ hr {
   min-height: 100vh;
   border: none;
   margin: 0;
-  position: fixed;
+  position: absolute;
   width: 100%;
   border-radius: 0px;
-  top: 100px;
+  top: 0;
   z-index: 200;
-  h1 {
+  padding: 50px 0;
+  .delimiter {
+    margin-top: 50px;
+  }
+  h1, p, ul {
     color: $qgray;
+    font-weight: 300;
+  }
+  ul {
+    list-style-type: circle;
   }
 }
 button.close {
