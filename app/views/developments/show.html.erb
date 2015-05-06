@@ -274,6 +274,22 @@
   </section>
 <% end %>
 
+<% unless @development.galleries.count == 0 %>
+  <script>
+    $('#masterslider').masterslider({
+        width:1920,    // slider standard width
+        height:1080,   // slider standard height
+        // more options...
+        controls : {
+            arrows : {autohide:false},
+            bullets : {}
+            // more slider controls...
+        }
+    });
+  </script>
+<% end %>
+
+
 
 <% if @development.penthouse_image.blank? %>
   <section class="development-no-gallery">

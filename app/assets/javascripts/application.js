@@ -12,37 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-// require turbolinks
 //= require bootstrap-sprockets
 //= require modernizr.custom
+// require page-transitions
 //= require easing.min
 //= require jquery.parallax.min
 //= require startup-kit
-
-// Stuff I don't need
-  // require jquery.scrollTo-1.4.3.1-min
-  // require page-transitions
-  // require jquery.svg.js
-  // require jquery.svganim
-// End
-
-
-
-//= require masterslider
-
 //= require ody-sidebar-menu
 //= require jquery.mCustomScrollbar.concat.min
-
-
-
-
-$('#masterslider').masterslider({
-    width:1920,    // slider standard width
-    height:1080,   // slider standard height
-    // more options...
-    controls : {
-        arrows : {autohide:false},
-        bullets : {}
-        // more slider controls...
-    }
-});
+//= require masterslider
