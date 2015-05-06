@@ -1510,6 +1510,12 @@ hr {
     font-weight: 300;
     text-transform: uppercase;
   }
+  h2 {
+    text-align: center;
+    font-weight: 300;
+    font-family: $lato;
+    color: $qgray;
+  }
   .btn {
     transform: rotate(90deg);
     outline: none;
