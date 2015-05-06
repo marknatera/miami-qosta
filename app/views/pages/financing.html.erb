@@ -62,3 +62,27 @@
     </div>
   </div>
 </section>
+
+<script>
+  (function($) {
+    $('.finance').each(function() {
+      if (! isMobile.any() ) {
+        $(this).parallax('50%', .3, true);
+      } else {
+        $(this).css('background-attachment', 'initial')
+      }
+    })
+  }(jQuery));
+</script>
+
+<script>
+  (function($) {
+    $('.finance-info').each(function() {
+      if (! isMobile.any() ) {
+        $(this).parallax('50%', .3, true);
+      } else {
+        $(this).css('background-attachment', 'initial')
+      }
+    })
+  }(jQuery));
+</script>

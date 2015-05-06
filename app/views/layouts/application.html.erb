@@ -6,6 +6,7 @@
   <meta name="keyword" content="<%= yield(:keyword).blank? ? 'MiamiQosta' : yield(:keyword) %>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="msvalidate.01" content="FC011CE0105FCDEF96CA6CF4983F14D2" />
 
@@ -44,35 +45,26 @@
   <!-- </div> -->
 
 
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application-btm' %>
 
   <script>
+    $( "#ody-trigger" ).click(function() {
+      $( "#bkg-overlay" ).toggle();
+    });
+    $( "#ody-trigger" ).click(function() {
+      $( "body" ).toggleClass("stay-still");
+    });
+  </script>
 
-  $( "#ody-trigger" ).click(function() {
-    $( "#bkg-overlay" ).toggle();
-  });
-  $( "#ody-trigger" ).click(function() {
-    $( "body" ).toggleClass("stay-still");
-  });
-
+  <script>
     (function() {
       [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
         new SelectFx(el);
       } );
     })();
+  </script>
 
-
-    (function($) {
-      $('.development-residence,.development-penthouse, .development-area, .development-featured, .development-amenities, .development-services, .header-15-sub-home, .project-home, .development-btm, .concierge-1, .concierge-2, .concierge-3, .concierge-4, .concierge-5, .concierge-6, .concierge-7, .concierge-8, .concierge-9, .sky, .sky-info, .ocean, .ocean-info, .executive, .executive-info, .exotic, .exotic-info, .time, .time-info, .invest-1, .invest-2, .invest-3, .house, .house-info, .integral-1, .integral-2, .integral-3, .integral-4, .integral-5, .integral-6, .legal, .legal-info, .visa, .visa-2, .visa-4, .visa-5, .eb5, .eb5-2, .finance, .finance-info').each(function() {
-        if (! isMobile.any() ) {
-          $(this).parallax('50%', .3, true);
-        } else {
-          $(this).css('background-attachment', 'initial')
-        }
-      })
-    }(jQuery));
-
-
+  <script>
     // Scroll to id
     $(function() {
       $('a[href*=#]:not([href=#])').click(function() {
@@ -88,19 +80,7 @@
         }
       });
     });
-
-    jQuery(window).resize(function(){
-       resizenow();
-    });
-    function resizenow() {
-      var browserwidth = jQuery(window).width();
-      var browserheight = jQuery(window).height();
-      jQuery('.bonfire-pageloader-icon').css('right', ((browserwidth - jQuery(".bonfire-pageloader-icon").width())/2)).css('top', ((browserheight - jQuery(".bonfire-pageloader-icon").height())/2));
-    };
-    resizenow();
-
   </script>
-
 
 
 </body>

@@ -112,3 +112,27 @@
     </div>
   </div>
 </section>
+
+<script>
+  (function($) {
+    $('.exotic').each(function() {
+      if (! isMobile.any() ) {
+        $(this).parallax('50%', .3, true);
+      } else {
+        $(this).css('background-attachment', 'initial')
+      }
+    })
+  }(jQuery));
+</script>
+
+<script>
+  (function($) {
+    $('.exotic-info').each(function() {
+      if (! isMobile.any() ) {
+        $(this).parallax('50%', .3, true);
+      } else {
+        $(this).css('background-attachment', 'initial')
+      }
+    })
+  }(jQuery));
+</script>

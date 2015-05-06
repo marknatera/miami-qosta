@@ -195,3 +195,27 @@
     </div>
   </div>
 </section>
+
+<script>
+  (function($) {
+    $('.sky').each(function() {
+      if (! isMobile.any() ) {
+        $(this).parallax('50%', .3, true);
+      } else {
+        $(this).css('background-attachment', 'initial')
+      }
+    })
+  }(jQuery));
+</script>
+
+<script>
+  (function($) {
+    $('.sky-info').each(function() {
+      if (! isMobile.any() ) {
+        $(this).parallax('50%', .3, true);
+      } else {
+        $(this).css('background-attachment', 'initial')
+      }
+    })
+  }(jQuery));
+</script>

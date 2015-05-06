@@ -12,10 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+// require turbolinks
 //= require bootstrap-sprockets
-//= require custom
+
+
 //= require masterslider
-//= require jquery.scrollTo-1.4.3.1-min
+// require jquery.scrollTo-1.4.3.1-min
 //= require modernizr.custom
 //= require page-transitions
 //= require easing.min
@@ -23,13 +25,12 @@
 //= require jquery.svganim
 //= require jquery.parallax.min
 //= require startup-kit
-//= require classie
-//= require selectFx
-//= require classie2
-//= require pageloader
-//= require tcon
+
+
 //= require ody-sidebar-menu
 //= require jquery.mCustomScrollbar.concat.min
+
+
 
 
 $('#masterslider').masterslider({

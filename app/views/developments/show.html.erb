@@ -427,3 +427,87 @@
     </div>
   </div>
 </section>
+
+<% unless @development.residence_image.blank? %>
+  <script>
+    (function($) {
+      $('.development-residence').each(function() {
+        if (! isMobile.any() ) {
+          $(this).parallax('50%', .3, true);
+        } else {
+          $(this).css('background-attachment', 'initial')
+        }
+      })
+    }(jQuery));
+  </script>
+<% end %>
+
+<% unless @development.penthouse_image.blank? %>
+  <script>
+    (function($) {
+      $('.development-penthouse').each(function() {
+        if (! isMobile.any() ) {
+          $(this).parallax('50%', .3, true);
+        } else {
+          $(this).css('background-attachment', 'initial')
+        }
+      })
+    }(jQuery));
+  </script>
+<% end %>
+
+<% unless @development.area_and_floorplan_image.blank? %>
+  <script>
+    (function($) {
+      $('.development-area').each(function() {
+        if (! isMobile.any() ) {
+          $(this).parallax('50%', .3, true);
+        } else {
+          $(this).css('background-attachment', 'initial')
+        }
+      })
+    }(jQuery));
+  </script>
+<% end %>
+
+<% unless @development.featured_image.blank? %>
+  <script>
+    (function($) {
+      $('.development-featured').each(function() {
+        if (! isMobile.any() ) {
+          $(this).parallax('50%', .3, true);
+        } else {
+          $(this).css('background-attachment', 'initial')
+        }
+      })
+    }(jQuery));
+  </script>
+<% end %>
+
+<% unless @development.amenities_image.blank? %>
+  <script>
+    (function($) {
+      $('.development-amenities').each(function() {
+        if (! isMobile.any() ) {
+          $(this).parallax('50%', .3, true);
+        } else {
+          $(this).css('background-attachment', 'initial')
+        }
+      })
+    }(jQuery));
+  </script>
+<% end %>
+
+<% unless @development.services_image.blank? %>
+  <script>
+    (function($) {
+      $('.development-services').each(function() {
+        if (! isMobile.any() ) {
+          $(this).parallax('50%', .3, true);
+        } else {
+          $(this).css('background-attachment', 'initial')
+        }
+      })
+    }(jQuery));
+  </script>
+<% end %>

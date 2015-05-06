@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get '/investments' => 'pages#investments'
   get '/investments/how-to-buy-a-house' => 'pages#house'
   get '/integral-service' => 'pages#integral'
-  get '/integral-service/legal' => 'pages#legal'
+  # get '/integral-service/legal' => 'pages#legal'
   get '/integral-service/visa-eb5' => 'pages#visa'
   get '/integral-service/eb5-program' => 'pages#eb5'
   get '/integral-service/financing' => 'pages#financing'

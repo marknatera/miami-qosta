@@ -90,3 +90,27 @@
     </div>
   </div>
 </section>
+
+<script>
+  (function($) {
+    $('.header-15-sub-home').each(function() {
+      if (! isMobile.any() ) {
+        $(this).parallax('50%', .3, true);
+      } else {
+        $(this).css('background-attachment', 'initial')
+      }
+    })
+  }(jQuery));
+</script>
+
+<script>
+  (function($) {
+    $('.project-home').each(function() {
+      if (! isMobile.any() ) {
+        $(this).parallax('50%', .3, true);
+      } else {
+        $(this).css('background-attachment', 'initial')
+      }
+    })
+  }(jQuery));
+</script>

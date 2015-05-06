@@ -1,6 +1,6 @@
 
 
-<!-- END SCRIPTS + CSS -->
+<%= javascript_include_tag "pageloader" %>
 
 <!-- BEGIN THE LOADING SCREEN -->
 <div id="bonfire-pageloader">
@@ -38,3 +38,17 @@
 
 </div>
 <!-- END THE LOADING SCREEN -->
+
+<!-- BEGIN PLACE LOADING ICON IN THE MIDDLE OF THE PAGE -->
+<script>
+jQuery(window).resize(function(){
+	resizenow();
+});
+function resizenow() {
+	var browserwidth = jQuery(window).width();
+	var browserheight = jQuery(window).height();
+	jQuery('.bonfire-pageloader-icon').css('right', ((browserwidth - jQuery(".bonfire-pageloader-icon").width())/2)).css('top', ((browserheight - jQuery(".bonfire-pageloader-icon").height())/2));
+};
+resizenow();
+</script>
+<!-- END PLACE LOADING ICON IN THE MIDDLE OF THE PAGE -->
