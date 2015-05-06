@@ -14,18 +14,21 @@
 //= require jquery_ujs
 // require turbolinks
 //= require bootstrap-sprockets
-
-
-//= require masterslider
-// require jquery.scrollTo-1.4.3.1-min
 //= require modernizr.custom
-//= require page-transitions
 //= require easing.min
-//= require jquery.svg.js
-//= require jquery.svganim
 //= require jquery.parallax.min
 //= require startup-kit
 
+// Stuff I don't need
+  // require jquery.scrollTo-1.4.3.1-min
+  // require page-transitions
+  // require jquery.svg.js
+  // require jquery.svganim
+// End
+
+
+
+//= require masterslider
 
 //= require ody-sidebar-menu
 //= require jquery.mCustomScrollbar.concat.min
