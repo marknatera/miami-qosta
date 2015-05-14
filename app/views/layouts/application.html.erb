@@ -36,6 +36,69 @@
   <%= javascript_include_tag 'application-btm' %>
 
   <script>
+    var NKS_Form_Opts = {
+          'ajaxurl' : '',
+      		'theme' : 'minimalistic', // flat'minimalistic', 'aerial'
+      		'sidebar_pos' : 'right', // 'right'
+      		'additional_phone_input' : false,
+      		'additional_company_input' : false,
+      		'additional_address_input' : false,
+      		'additional_subject_input' : false,
+      		'humantest' : true,
+      		'userpic' : '', // URL to image
+      		'firstline' : '',
+      		'secondline' : '',
+      		'thirdline' : '',
+      		'message_to_sender': '',
+      		'fade_content' : 'light', // 'dark', 'none'
+      		'userpic_style' : 'theme_custom', // 'none'
+      		'label' : 'circle', // 'circle_fade', 'rectangle'
+      		'label_top' : '80%',
+      		'label_vis' : 'visible', // 'hidden', 'hidden_500', 'scroll', 'scroll_into'
+      		'label_scroll_selector' : '',
+      		'label_mouseover' : false,
+      		'bg' : 'blur1', // 'none', 'custom', 'blur1', 'blur2', ... , 'blur15', 'pattern1', ... , 'pattern15'
+      		'path_to_img_folder' : 'img',
+      		'custom_bg_url': '',
+      		'togglers' : '',
+      		'social' : {},
+      		'socialbar' : 'top', // 'bottom'
+      		'show_socialbar': true,
+      		'aerial_invert_style' : false,
+      		'aerial_rgba_bg' : 'rgba(0, 0, 0, 0.1)',
+      		'send_text' : 'Send',
+      		'send_more_text' : 'Send more',
+      		'try_again_text' : 'Try again',
+      		'close_text' : 'Close',
+      		'sending_text' : 'Sending',
+      		'msg_fail_text' : 'Something went wrong while sending your message',
+      		'success' : 'Your message was successfully sent!',
+      		'placeholders': {
+      			'name': 'Your name',
+      			'company': 'Your company',
+      			'phone': 'Your phone',
+      			'address': 'Your address',
+      			'subject': 'Email subject',
+      			'email': 'Your email',
+      			'msg': 'Your message'
+      		},
+      		'errors' : {
+      			'required' : '* Please enter %%',
+      			'min' : '* %% must have at least %% characters.',
+      			'max' : '* %% can have at most %% characters.',
+      			'matches' : '* %% must match %%.',
+      			'less' : '* %% must be less than %%',
+      			'greater' : '* %% must be greater than %%.',
+      			'numeric' : '* %% must be numeric.',
+      			'email' : '* %% must be a valid email address.',
+      			'answer' : '* Wrong %%'
+      		},
+
+      		color_schema: ['#c0392b', '#cf4739', '#cd3424', '#d9593e', '#c84c3f', '#bb2d1f', '#e96d3d', '#e94e3d', '#2f1420']
+      	};
+  </script>
+
+  <script>
     $( "#ody-trigger" ).click(function() {
       $( "#bkg-overlay" ).toggle();
     });
@@ -66,19 +129,6 @@
       });
     });
   </script>
-
-  <script>
-  var NKS_Form_Opts = {
- 		'ajaxurl' : '/path_to_handler_script_on_server.php',
-        'theme' : 'minimalistic',
-        'firstline' : 'John',
-        'secondline' : 'Appleseed',
-        'thirdline' : 'Company owner',
-        'userpic' : '/img/my_logo.png',
-        'bg' : 'blur7',
-        'path_to_img_folder' : 'path_to_plugin_folder/img',
-  }
-</script>
 
 
 </body>

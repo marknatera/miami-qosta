@@ -13,4 +13,4 @@
 //= require language-classie
 //= require selectFx
 //= require tcon
-//= jq-nks-contact-form.min
+//= require jq-nks-contact-form.min
