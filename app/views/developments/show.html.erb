@@ -2,7 +2,7 @@
 <% meta_description @development.meta_description %>
 <% keyword @development.name %>
 
-<div class="more-info" style="z-index:200">
+<div class="more-info">
   <button id="more-info-btn" type="button" class="btn btn-dev" data-toggle="modal" data-target=".bs-example-modal-lg">More Info</button>
   <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -96,7 +96,7 @@
   $(function() {
       $('#more-info-btn').css({
           'position' : 'fixed',
-          'left' : '-2%',
+          'left' : '-30px',
           'top' : '50%',
           'z-index': '4',
           'transform': 'rotate(90deg)'
