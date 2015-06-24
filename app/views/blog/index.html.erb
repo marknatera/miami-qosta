@@ -13,12 +13,28 @@
   </div>
 </section>
 
-<section id="next">
-  <% @posts.each do |p| %>
+<% @posts.each do |p| %>
+  <section id="next" class="posts" style="background-image: url(<%= p.featured_image %>)">
+    <div class="bkg"></div>
     <div class="container-fluid">
-
-
-
+      <div class="row">
+        <div class="col-sm-12 v-align">
+          <h2><%= p.title %></h2>
+          <%= link_to 'Read More', p %>
+        </div>
+      </div>
     </div>
-  <% end %>
-</section>
+  </section>
+<% end %>
+
+<script>
+  (function($) {
+    $('.posts').each(function() {
+      if (! isMobile.any() ) {
+        $(this).parallax('50%', .3, true);
+      } else {
+        $(this).css('background-attachment', 'initial')
+      }
+    })
+  }(jQuery));
+</script>

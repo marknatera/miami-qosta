@@ -2040,3 +2040,37 @@ button.close {
     *width: 14.285714285714285714285714285714%;
   }
 }
+
+// Blog index
+.posts {
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 40vh;
+  .bkg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: black;
+    opacity: .3;
+  }
+  h2 {
+    text-align: center;
+    color: white;
+    font-family: $lato;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  a {
+    text-align: center;
+    color: white;
+    font-family: $lato;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+}
