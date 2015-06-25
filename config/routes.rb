@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :contacts
-  resources :blog
+  resources :blog, only: [:index, :show]
+  resources :posts, path: '/blog', only: [:show]
 
   # resources :developments, except: [:index]
   resources :developments, path: '/new-developments', except: [:index]

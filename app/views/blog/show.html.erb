@@ -1,2 +1,37 @@
-<h1>Blog#show</h1>
-<p>Find me in app/views/blog/show.html.erb</p>
+<section class="post-featured" style="background-image: url(<%= @post.featured_image %>)">
+  <div class="bkg"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1><%= @post.title %></h1>
+        <p><%= @post.created_at.strftime("%B %d, %Y") %></p>
+        <hr>
+      </div>
+    </div>
+  </div>
+  <a href="#post"><%= image_tag 'arrow-down-white.svg', class: 'scroll-down' %></a>
+</section>
+
+<section id="post" class="the-post">
+  <div class="container-fluid">
+    <div class="col-sm-10 col-sm-offset-1">
+      <div class="col-md-8">
+        <p><%= raw @post.content %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+  (function($) {
+    $('.post-featured').each(function() {
+      if (! isMobile.any() ) {
+        $(this).parallax('50%', .3, true);
+      } else {
+        $(this).css('background-attachment', 'initial')
+      }
+    })
+  }(jQuery));
+</script>

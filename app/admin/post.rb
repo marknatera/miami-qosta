@@ -18,7 +18,7 @@ ActiveAdmin.register Post do
     f.inputs "Post Details" do
       f.input :title
       f.input :featured_image, :hint => f.image_tag(f.object.featured_image.url(:admin))
-      f.input :content
+      f.input :content, as: :ckeditor
     end
     f.actions
   end

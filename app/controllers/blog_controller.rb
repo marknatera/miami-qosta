@@ -3,18 +3,16 @@ class BlogController < ApplicationController
   before_filter :find_post, only: [:show]
 
   def index
-    @posts = Post.all
-
+    @posts = Post.all.order(id: :desc)
   end
 
   def show
-    respond_with(@posts)
   end
 
   private
 
-  def find_dev
-    @post = Post.find_by_slug!(params[:id])
+  def find_post
+    @post = Post.find(params[:id])
   end
 
 end
