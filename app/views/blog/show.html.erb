@@ -17,6 +17,26 @@
     <div class="col-sm-10 col-sm-offset-1">
       <div class="col-md-8">
         <p><%= raw @post.content %></p>
+        <div style="margin-top:50px;"></div>
+        <%- disqus_thread %>
+      </div>
+      <div class="col-sm-4 border">
+        <h4 class="blog-sidebar">Rescent Posts</h4>
+        <% @recent.each do |r| %>
+          <div class="container-fluid" style="padding-left: 0;padding-right: 0;">
+            <div class="row">
+              <div class="col-sm-12" style="padding-left: 0;padding-right: 0;">
+                <div class="col-sm-4">
+                  <%= image_tag r.featured_image(:admin) %>
+                </div>
+                <div class="col-sm-8 blog-sidebar">
+                  <p><b><%= r.title %></b></br>
+                  <%= r.created_at.strftime("%B %d, %Y") %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

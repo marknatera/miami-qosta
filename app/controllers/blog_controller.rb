@@ -7,6 +7,7 @@ class BlogController < ApplicationController
   end
 
   def show
+    @recent = Post.all.order(id: :desc)
   end
 
   private

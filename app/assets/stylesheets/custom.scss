@@ -2094,13 +2094,13 @@ button.close {
   p {
     text-align: center;
     color: white;
-    font-family: lato;
+    font-family: $lato;
     font-weight: 300;
   }
   h1 {
     text-align: center;
     color: white;
-    font-family: lato;
+    font-family: $lato;
     font-weight: 300;
     text-transform: uppercase;
     font-size: 60px;
@@ -2128,6 +2128,27 @@ button.close {
     font-weight: 300;
     color: #6d6e71;
   }
+  .border {
+    border-left: $qgray solid 1px;
+    height: 100%;
+    @media (max-width: 991px) {
+      border-left: none;
+    }
+  }
 }
 
 .post-main .v-align {top:40%;}
+
+.blog-sidebar {
+  text-transform: uppercase;
+  font-family: lato;
+  font-weight: 300;
+  color: $qgray;
+  margin-bottom: 20px;
+  p {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-family: $lato;
+    font-weight: 300;
+  }
+}

@@ -13,7 +13,7 @@
       </div>
     </div>
   </section>
-<% else %>
+<% elsif %>
   <section class="top-section">
     <div class="container-fluid v-align">
       <div class="row">
@@ -21,14 +21,16 @@
           <h1>NEWS / Blog</h1>
           <hr>
           <p>STAY UPDATED</p>
-          <a href="#next"><%= image_tag 'arrow-down-gray.svg' %></a>
+          <a href="#le-go"><%= image_tag 'arrow-down-gray.svg' %></a>
         </div>
       </div>
     </div>
   </section>
 
+  <section id="le-go"></section>
+
   <% @posts.each do |p| %>
-    <section id="next" class="posts <%= p.title.parameterize %>" style="background-image: url(<%= p.featured_image %>)">
+    <section class="posts <%= p.title.parameterize %>" style="background-image: url(<%= p.featured_image %>)">
       <div class="bkg"></div>
       <div class="container-fluid">
         <div class="row">

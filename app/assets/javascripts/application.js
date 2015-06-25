@@ -21,3 +21,4 @@
 //= require ody-sidebar-menu
 //= require jquery.mCustomScrollbar.concat.min
 //= require masterslider
+//= require disqus_rails
