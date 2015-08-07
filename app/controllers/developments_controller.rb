@@ -21,13 +21,27 @@ class DevelopmentsController < ApplicationController
   def show
     @devs = Development.all
     unless @development.relation_development_1 == nil
-      @relation_1 = Development.find(@development.relation_development_1)
+      if Development.exists?(@development.relation_development_1) == true
+        @relation_1 = Development.find(@development.relation_development_1)
+      else
+        @relation_1 = false
+      end
     end
+
     unless @development.relation_development_2 == nil
-      @relation_2 = Development.find(@development.relation_development_2)
+      if Development.exists?(@development.relation_development_2) == true
+        @relation_2 = Development.find(@development.relation_development_2)
+      else
+        @relation_2 = false
+      end
     end
+
     unless @development.relation_development_3 == nil
-      @relation_3 = Development.find(@development.relation_development_3)
+      if Development.exists?(@development.relation_development_3) == true
+        @relation_3 = Development.find(@development.relation_development_3)
+      else
+        @relation_3 = false
+      end
     end
   end
 

@@ -495,33 +495,38 @@
 <section class="development-list">
   <div class="container-fluid">
     <div class="row">
-      <% unless @relation_1.name.empty? == true %>
-        <div class="col-xs-12 col-sm-4 hover-dev" style="padding-left:0;padding-right:0;">
-          <div class="hover-development"></div>
-            <h3><%= link_to "#{@relation_1.name}", @relation_1 %></h3>
-            <%= link_to image_tag(@relation_1.featured_image.url(:retina), class: 'img-responsive', alt: @development.name), @relation_1 %>
-        </div>
+      <% unless @development.relation_development_1 == nil %>
+        <% unless @relation_1 == false %>
+          <div class="col-xs-12 col-sm-4 hover-dev" style="padding-left:0;padding-right:0;">
+            <div class="hover-development"></div>
+              <h3><%= link_to "#{@relation_1.name}", @relation_1 %></h3>
+              <%= link_to image_tag(@relation_1.featured_image.url(:retina), class: 'img-responsive', alt: @development.name), @relation_1 %>
+          </div>
+        <% end %>
       <% end %>
 
-      <% unless @relation_2.name.empty? == true %>
-        <div class="col-xs-12 col-sm-4 hover-dev" style="padding-left:0;padding-right:0;">
-          <div class="hover-development"></div>
-          <h3><%= link_to "#{@relation_2.name}", @relation_2 %></h3>
-          <%= link_to image_tag(@relation_2.featured_image.url(:retina), class: 'img-responsive', alt: @development.name), @relation_3 %>
-        </div>
+      <% unless @development.relation_development_2 == nil %>
+        <% unless @relation_2 == false %>
+          <div class="col-xs-12 col-sm-4 hover-dev" style="padding-left:0;padding-right:0;">
+            <div class="hover-development"></div>
+            <h3><%= link_to "#{@relation_2.name}", @relation_2 %></h3>
+            <%= link_to image_tag(@relation_2.featured_image.url(:retina), class: 'img-responsive', alt: @development.name), @relation_3 %>
+          </div>
+        <% end %>
       <% end %>
 
-      <% unless @relation_3.name.empty? == true %>
-        <div class="col-xs-12 col-sm-4 hover-dev" style="padding-left:0;padding-right:0;">
-          <div class="hover-development"></div>
-          <h3><%= link_to "#{@relation_3.name}", @relation_3 %></h3>
-          <%= link_to image_tag(@relation_3.featured_image.url(:retina), class: 'img-responsive', alt: @development.name), @relation_3 %>
-        </div>
+      <% unless @development.relation_development_3 == nil %>
+        <% unless @relation_3 == false %>
+          <div class="col-xs-12 col-sm-4 hover-dev" style="padding-left:0;padding-right:0;">
+            <div class="hover-development"></div>
+            <h3><%= link_to "#{@relation_3.name}", @relation_3 %></h3>
+            <%= link_to image_tag(@relation_3.featured_image.url(:retina), class: 'img-responsive', alt: @development.name), @relation_3 %>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
 </section>
-
 
 
 <section class="all-devs">
