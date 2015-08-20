@@ -41,7 +41,6 @@ gem 'paperclip', '~> 4.2.1'
 gem 'aws-sdk', '< 2.0'
 gem "figaro"
 gem 'puma'
-gem 'disqus_rails'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
