@@ -39,7 +39,7 @@ gem 'binding_of_caller', '~> 0.7.2'
 gem 'awesome_print', '~> 1.6.1'
 gem 'paperclip', '~> 4.2.1'
 gem 'aws-sdk', '< 2.0'
-gem "figaro"
+# gem 'figaro'
 gem 'puma'
 
 # Use Unicorn as the app server
